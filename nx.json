@@ -1,8 +1,5 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "affected": {
-    "defaultBase": "master"
-  },
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx/tasks-runners/default",
@@ -11,13 +8,87 @@
           "build",
           "lint",
           "test",
-          "e2e"
+          "e2e",
+          "build-storybook"
         ]
       }
     }
   },
+  "extends": "nx/presets/core.json",
+  "affected": {
+    "defaultBase": "master"
+  },
   "workspaceLayout": {
-    "projectNameAndRootFormat": "as-provided"
+    "appsDir": "apps",
+    "libsDir": "libs",
+    "projectNameAndRootFormat": "derived"
+  },
+  "defaultProject": "",
+  "generators": {
+    "@nx/node:library": {
+      "unitTestRunner": "none",
+      "strict": true,
+      "buildable": true
+    },
+    "@nx/node:application": {
+      "unitTestRunner": "none",
+      "e2eTestRunner": "none",
+      "strict": true
+    },
+    "@nx/js:library": {
+      "unitTestRunner": "none",
+      "strict": true,
+      "buildable": true
+    },
+    "@nx/react": {
+      "application": {
+        "style": "@emotion/styled",
+        "linter": "eslint",
+        "bundler": "webpack",
+        "babel": true,
+        "pascalCaseFiles": true,
+        "unitTestRunner": "none"
+      },
+      "component": {
+        "style": "@emotion/styled",
+        "pascalCaseFiles": true,
+        "unitTestRunner": "none"
+      },
+      "library": {
+        "style": "@emotion/styled",
+        "linter": "eslint",
+        "bundler": "vite",
+        "pascalCaseFiles": true,
+        "unitTestRunner": "none"
+      },
+      "storybook-configuration": {
+        "configureCypress": false,
+        "generateStories": true,
+        "generateCypressSpecs": false,
+        "configureStaticServe": true,
+        "tsConfiguration": true,
+        "configureTestRunner": false
+      }
+    }
+  },
+  "namedInputs": {
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
+    "sharedGlobals": [
+      "{workspaceRoot}/babel.config.js"
+    ],
+    "production": [
+      "default",
+      "!{projectRoot}/src/test-setup.[jt]s",
+      "!{projectRoot}/.eslintrc.js",
+      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+      "!{projectRoot}/tsconfig.spec.json",
+      "!{projectRoot}/**/*.stories.@(js|jsx|ts|tsx|mdx)",
+      "!{projectRoot}/.storybook/**/*",
+      "!{projectRoot}/tsconfig.storybook.json"
+    ]
   },
   "targetDefaults": {
     "build": {
@@ -28,16 +99,45 @@
         "production",
         "^production"
       ]
+    },
+    "lint": {
+      "inputs": [
+        "default",
+        "{workspaceRoot}/.eslintrc.js"
+      ]
+    },
+    "e2e": {
+      "inputs": [
+        "default",
+        "^production"
+      ]
+    },
+    "test": {
+      "inputs": [
+        "default",
+        "^production"
+      ]
+    },
+    "build-storybook": {
+      "inputs": [
+        "default",
+        "^production",
+        "{projectRoot}/.storybook/**/*",
+        "{projectRoot}/tsconfig.storybook.json"
+      ]
     }
   },
-  "namedInputs": {
-    "default": [
-      "{projectRoot}/**/*",
-      "sharedGlobals"
-    ],
-    "production": [
-      "default"
-    ],
-    "sharedGlobals": []
+  "pluginsConfig": {
+    "@nx/js": {
+      "analyzeSourceFiles": true
+    },
+    "@nx/node": {
+      "analyzeSourceFiles": true
+    }
+  },
+  "__common_commands": {
+    "remove_project": "nx g @nx/node:remove <name>",
+    "create_application": "nx g @nx/node:application --unitTestRunner=none --js <name>",
+    "create_lib": "nx g @nx/node:library --unitTestRunner=none --js <name>"
   }
 }

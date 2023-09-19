@@ -1,0 +1,35 @@
+{
+  "name": "lb4-cache",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/lb4-cache/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/lb4-cache",
+        "tsConfig": "libs/lb4-cache/tsconfig.lib.json",
+        "packageJson": "libs/lb4-cache/package.json",
+        "main": "libs/lb4-cache/src/index.ts",
+        "assets": [
+          "libs/lb4-cache/*.md"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/lb4-cache/**/*.ts"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

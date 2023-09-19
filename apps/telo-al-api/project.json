@@ -1,0 +1,57 @@
+{
+  "name": "teloalapi",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/telo-al-api/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/apps/telo-al-api",
+        "main": "apps/telo-al-api/src/main.ts",
+        "tsConfig": "apps/telo-al-api/tsconfig.app.json",
+        "assets": [
+          {
+            "glob": "**",
+            "input": "apps/telo-al-api/public",
+            "output": "public"
+          }
+        ],
+        "clean": true
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "options": {
+        "buildTarget": "teloalapi:build",
+        "port": 3000,
+        "watch": false,
+        "inspect": false
+      }
+    },
+    "watch": {
+      "executor": "@nx/js:node",
+      "options": {
+        "buildTarget": "teloalapi:build",
+        "port": 3000,
+        "watch": true,
+        "inspect": false
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/telo-al-api/**/*.ts"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

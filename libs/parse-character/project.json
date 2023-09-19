@@ -1,0 +1,35 @@
+{
+  "name": "parse-character",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/parse-character/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/parse-character",
+        "tsConfig": "libs/parse-character/tsconfig.lib.json",
+        "packageJson": "libs/parse-character/package.json",
+        "main": "libs/parse-character/src/index.ts",
+        "assets": [
+          "libs/parse-character/*.md"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/parse-character/**/*.ts"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
