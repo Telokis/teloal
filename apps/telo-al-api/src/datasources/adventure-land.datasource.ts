@@ -57,6 +57,21 @@ const dataSourceConfig = {
         getDataPage: [],
       },
     },
+    {
+      template: {
+        method: "POST",
+        fullResponse: false, // We only want the body
+        url: `${config.al.url}/api/pull_merchants`,
+        headers: {
+          Cookie: `auth=${config.al.token}`,
+          "content-type": "application/x-www-form-urlencoded",
+        },
+        body: "method=pull_merchants&arguments=%7B%7D",
+      },
+      functions: {
+        getMerchants: [],
+      },
+    },
   ],
 };
 

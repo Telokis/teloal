@@ -9,77 +9,81 @@ export interface ALCharacterDefinition {
   slots: Partial<Record<SlotType, ALCharacterCleanSlot>>;
 }
 
-model();
-class ItemSlots extends Model {
+@model({
+  settings: {
+    description: "The gear information. Each entry is optional.",
+  },
+})
+export class AlCharacterItemSlots extends Model {
   @property()
-  amulet: AlCharacterItem;
+  amulet?: AlCharacterItem;
 
   @property()
-  belt: AlCharacterItem;
+  belt?: AlCharacterItem;
 
   @property()
-  cape: AlCharacterItem;
+  cape?: AlCharacterItem;
 
   @property()
-  chest: AlCharacterItem;
+  chest?: AlCharacterItem;
 
   @property()
-  earring1: AlCharacterItem;
+  earring1?: AlCharacterItem;
 
   @property()
-  earring2: AlCharacterItem;
+  earring2?: AlCharacterItem;
 
   @property()
-  elixir: AlCharacterItem;
+  elixir?: AlCharacterItem;
 
   @property()
-  gloves: AlCharacterItem;
+  gloves?: AlCharacterItem;
 
   @property()
-  helmet: AlCharacterItem;
+  helmet?: AlCharacterItem;
 
   @property()
-  mainhand: AlCharacterItem;
+  mainhand?: AlCharacterItem;
 
   @property()
-  offhand: AlCharacterItem;
+  offhand?: AlCharacterItem;
 
   @property()
-  orb: AlCharacterItem;
+  orb?: AlCharacterItem;
 
   @property()
-  pants: AlCharacterItem;
+  pants?: AlCharacterItem;
 
   @property()
-  ring1: AlCharacterItem;
+  ring1?: AlCharacterItem;
 
   @property()
-  ring2: AlCharacterItem;
+  ring2?: AlCharacterItem;
 
   @property()
-  shoes: AlCharacterItem;
+  shoes?: AlCharacterItem;
 }
 
 @model({
   settings: {
     description: "A publicly visible character.",
   },
+  jsonSchema: {
+    required: ["name", "level", "ctype", "slots"],
+  },
 })
 export class AlCharacter extends Model implements ALCharacterDefinition {
   @property({
-    type: "string",
     description: "Name of the character.",
   })
   name: string;
 
   @property({
-    type: "number",
     description: "Level of the character.",
   })
   level: number;
 
   @property({
-    type: "string",
     description: "Class of the character.",
     jsonSchema: {
       enum: ["mage", "merchant", "paladin", "priest", "ranger", "rogue", "warrior"],
@@ -90,7 +94,7 @@ export class AlCharacter extends Model implements ALCharacterDefinition {
   @property({
     description: "Currently equipped items.",
   })
-  slots: ItemSlots;
+  slots: AlCharacterItemSlots;
 
   constructor(data?: Partial<AlCharacter>) {
     super(data);

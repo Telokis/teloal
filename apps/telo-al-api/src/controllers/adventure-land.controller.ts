@@ -4,6 +4,8 @@ import { NotFoundErrorSchema } from "../schemas/NotFoundError";
 import { AdventureLandService } from "../services";
 import { cache } from "@teloal/lb4-cache";
 import { parseCharacters, AlCharacter } from "@teloal/parse-character";
+import { AlMerchants } from "../types/AlMerchants";
+import { AlMerchant, AlMerchantTradeSlots } from "../models";
 
 @api({ basePath: "/v1/al" })
 export class AdventureLandController {
@@ -116,5 +118,22 @@ export class AdventureLandController {
     const json = html.trim().replace(/^[^{]+?(\{.*?\});$/i, "$1");
 
     return json;
+  }
+
+  @cache({ ttl: 75 })
+  @get("/trades")
+  @response(200, {
+    description: "Returns a list of the online merchants as scraped from the adventure land page.",
+    content: {
+      "application/json": {
+        schema: { type: "array", items: getModelSchemaRef(AlMerchant) },
+      },
+    },
+  })
+  async getTrades(): Promise<Array<AlMerchant>> {
+    const json = JSON.parse(await this.alService.getMerchants()) as AlMerchants;
+
+    // @ts-ignore
+    return json[0].chars.map((merchant) => new AlMerchant(merchant));
   }
 }

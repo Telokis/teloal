@@ -36,7 +36,7 @@
     "prettier": "^2.6.2",
     "source-map-support": "^0.5.21",
     "tsc-watch": "6.0.0",
-    "typed-adventureland": "^0.0.39",
+    "typed-adventureland": "^0.0.41",
     "typescript": "~5.1.6"
   }
 }
