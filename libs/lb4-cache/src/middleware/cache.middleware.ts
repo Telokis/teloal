@@ -48,18 +48,20 @@ export class CacheMiddlewareProvider implements Provider<Middleware> {
 
     const ttl = opts.ttl ?? 10;
 
+    response.setHeader("Cache-Control", `public, max-age=${ttl}`);
+
     if (cachedResult) {
       const dateHeader = response.getHeader("Date") as string | undefined;
       const date = dateHeader ? new Date(dateHeader) : new Date();
 
-      response.setHeader("X-cache", "HIT");
       response.setHeader("Age", Math.floor((date.getTime() - cachedResult.storedAt) / 1000));
-      response.setHeader("Cache-Control", `public, max-age=${ttl}`);
+      response.setHeader("X-cache", "HIT");
 
       return cachedResult.data;
     }
 
     response.setHeader("X-cache", "MISS");
+    response.setHeader("Age", 0);
 
     const result = await next();
     await this.cachingService.set(cachingKey, result, ttl);
