@@ -5,7 +5,7 @@ import { AdventureLandService } from "../services";
 import { cache } from "@teloal/lb4-cache";
 import { parseCharacters, AlCharacter } from "@teloal/parse-character";
 import { AlMerchants } from "../types/AlMerchants";
-import { AlMerchant, AlMerchantTradeSlots } from "../models";
+import { AlMerchant } from "../models";
 
 @api({ basePath: "/v1/al" })
 export class AdventureLandController {
