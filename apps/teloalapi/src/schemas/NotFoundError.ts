@@ -10,10 +10,22 @@ export const NotFoundErrorSchema: ResponseObject = {
         properties: {
           error: {
             type: "object",
+            required: ["statusCode", "name", "message"],
             properties: {
-              statusCode: { type: "number", const: 404 },
-              name: { type: "string", const: "NotFoundError" },
-              message: { type: "string" },
+              statusCode: {
+                type: "number",
+                description: "Constant value for this error.",
+                enum: [404],
+              },
+              name: {
+                type: "string",
+                description: "Constant value for this error.",
+                enum: ["NotFoundError"],
+              },
+              message: {
+                type: "string",
+                description: "Gives more information regarding the cause of the error.",
+              },
             },
           },
         },
