@@ -67,7 +67,9 @@ export class CacheMiddlewareProvider implements Provider<Middleware> {
     return result;
   }
 
-  async cacheKey(request: Request, opts: CacheOptions = {}) {
-    return `cache:${request.path}`;
+  async cacheKey(request: Request, opts: CacheOptions = {}): Promise<string> {
+    const k = `cache:${request.path}`;
+
+    return opts.caseSensitive ? k : k.toLowerCase();
   }
 }

@@ -18,6 +18,11 @@
             "glob": "**",
             "input": "apps/telo-al-api/public",
             "output": "public"
+          },
+          {
+            "glob": "**",
+            "input": "apps/telo-al-api/config",
+            "output": "config"
           }
         ],
         "clean": true

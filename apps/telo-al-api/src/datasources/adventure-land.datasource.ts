@@ -1,7 +1,8 @@
 import { inject, lifeCycleObserver, LifeCycleObserver } from "@loopback/core";
 import { juggler } from "@loopback/repository";
+import config from "config";
 
-const config = {
+const dataSourceConfig = {
   name: "AdventureLand",
   connector: "rest",
   crud: false,
@@ -10,7 +11,7 @@ const config = {
       template: {
         method: "GET",
         fullResponse: false, // We only want the body
-        url: "https://adventure.land/character/{name}",
+        url: `${config.al.url}/character/{name}`,
       },
       functions: {
         getCharacterPage: ["name"],
@@ -20,7 +21,7 @@ const config = {
       template: {
         method: "GET",
         fullResponse: false, // We only want the body
-        url: "https://adventure.land/player/{name}",
+        url: `${config.al.url}/player/{name}`,
       },
       functions: {
         getPlayerPage: ["name"],
@@ -30,7 +31,7 @@ const config = {
       template: {
         method: "GET",
         fullResponse: false, // We only want the body
-        url: "https://adventure.land/characters",
+        url: `${config.al.url}/characters`,
       },
       functions: {
         getCharactersPage: [],
@@ -40,7 +41,7 @@ const config = {
       template: {
         method: "GET",
         fullResponse: false, // We only want the body
-        url: "https://adventure.land/merchants",
+        url: `${config.al.url}/merchants`,
       },
       functions: {
         getMerchantsPage: [],
@@ -50,7 +51,7 @@ const config = {
       template: {
         method: "GET",
         fullResponse: false, // We only want the body
-        url: "https://adventure.land/data.js",
+        url: `${config.al.url}/data.js`,
       },
       functions: {
         getDataPage: [],
@@ -66,11 +67,11 @@ const config = {
 @lifeCycleObserver("datasource")
 export class AdventureLandDataSource extends juggler.DataSource implements LifeCycleObserver {
   static dataSourceName = "AdventureLand";
-  static readonly defaultConfig = config;
+  static readonly defaultConfig = dataSourceConfig;
 
   constructor(
     @inject("datasources.config.AdventureLand", { optional: true })
-    dsConfig: object = config,
+    dsConfig: object = dataSourceConfig,
   ) {
     super(dsConfig);
   }

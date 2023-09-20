@@ -1,4 +1,5 @@
 import { ApplicationConfig, TeloAlApiApplication } from "./application";
+import config from "config";
 
 export * from "./application";
 
@@ -15,10 +16,10 @@ export async function main(options: ApplicationConfig = {}) {
 }
 
 // Run the application
-const config = {
+const restConfig = {
   rest: {
-    port: +(process.env.PORT ?? 3000),
-    host: process.env.HOST,
+    port: config.port,
+    host: config.host,
     // The `gracePeriodForClose` provides a graceful close for http/https
     // servers with keep-alive clients. The default value is `Infinity`
     // (don't force-close). If you want to immediately destroy all sockets
@@ -32,7 +33,7 @@ const config = {
   },
 };
 
-main(config).catch((err) => {
+main(restConfig).catch((err) => {
   console.error("Cannot start the application.", err);
   process.exit(1);
 });
