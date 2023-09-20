@@ -45,7 +45,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          images: ${{ env.REGISTRY }}/${{ env.PROJECT_NAME }}
+          images: ${{ env.REGISTRY }}/${{ github.repository }}/${{ env.PROJECT_NAME }}
 
       # This step uses the `docker/build-push-action` action to build the image,
       # based on your repository's `Dockerfile`.
