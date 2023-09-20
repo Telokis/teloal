@@ -1,7 +1,7 @@
 {
   "name": "teloalapi",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/telo-al-api/src",
+  "sourceRoot": "apps/teloalapi/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -10,18 +10,18 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/apps/telo-al-api",
-        "main": "apps/telo-al-api/src/main.ts",
-        "tsConfig": "apps/telo-al-api/tsconfig.app.json",
+        "outputPath": "dist/apps/teloalapi",
+        "main": "apps/teloalapi/src/main.ts",
+        "tsConfig": "apps/teloalapi/tsconfig.app.json",
         "assets": [
           {
             "glob": "**",
-            "input": "apps/telo-al-api/public",
+            "input": "apps/teloalapi/public",
             "output": "public"
           },
           {
             "glob": "**",
-            "input": "apps/telo-al-api/config",
+            "input": "apps/teloalapi/config",
             "output": "config"
           }
         ],
@@ -53,7 +53,7 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "apps/telo-al-api/**/*.ts"
+          "apps/teloalapi/**/*.ts"
         ]
       }
     }

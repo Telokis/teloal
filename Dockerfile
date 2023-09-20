@@ -35,7 +35,7 @@ COPY --from=build --chown=node /build/dist/libs/helpers/ /home/node/app/node_mod
 COPY --from=build --chown=node /build/dist/libs/lb4-cache/ /home/node/app/node_modules/@teloal/lb4-cache/
 COPY --from=build --chown=node /build/dist/libs/parse-character/ /home/node/app/node_modules/@teloal/parse-character/
 
-COPY --from=build --chown=node /build/dist/apps/telo-al-api/ .
+COPY --from=build --chown=node /build/dist/apps/teloalapi/ .
 
 ENV HOST=0.0.0.0 PORT=3000
 
