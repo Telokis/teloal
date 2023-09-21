@@ -34,6 +34,7 @@ RUN npm ci --production
 COPY --from=build --chown=node /build/dist/libs/helpers/ /home/node/app/node_modules/@teloal/helpers/
 COPY --from=build --chown=node /build/dist/libs/lb4-cache/ /home/node/app/node_modules/@teloal/lb4-cache/
 COPY --from=build --chown=node /build/dist/libs/parse-character/ /home/node/app/node_modules/@teloal/parse-character/
+COPY --from=build --chown=node /build/dist/libs/upound/ /home/node/app/node_modules/@teloal/upound/
 
 COPY --from=build --chown=node /build/dist/apps/teloalapi/ .
 
