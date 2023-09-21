@@ -4,6 +4,7 @@ export * from "./lib/debounce";
 export * from "./lib/ensureDirectoryExists";
 export * from "./lib/formatDate";
 export * from "./lib/formatDuration";
+export * from "./lib/formatNumber";
 export * from "./lib/hashString";
 export * from "./lib/md5";
 export * from "./lib/sleep";

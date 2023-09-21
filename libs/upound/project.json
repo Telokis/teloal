@@ -1,0 +1,36 @@
+{
+  "name": "upound",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/upound/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/upound",
+        "main": "libs/upound/src/index.ts",
+        "tsConfig": "libs/upound/tsconfig.lib.json",
+        "assets": [
+          "libs/upound/*.md",
+          "libs/upound/src/data.json"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/upound/**/*.ts",
+          "libs/upound/package.json"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

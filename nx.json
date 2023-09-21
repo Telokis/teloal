@@ -28,7 +28,8 @@
     "@nx/node:library": {
       "unitTestRunner": "none",
       "strict": true,
-      "buildable": true
+      "buildable": true,
+      "bundler": "tsc"
     },
     "@nx/node:application": {
       "unitTestRunner": "none",
@@ -38,7 +39,8 @@
     "@nx/js:library": {
       "unitTestRunner": "none",
       "strict": true,
-      "buildable": true
+      "buildable": true,
+      "bundler": "tsc"
     },
     "@nx/react": {
       "application": {
