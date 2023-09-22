@@ -1,4 +1,4 @@
-import { JsonSchema, api, get, getModelSchemaRef, param, response } from "@loopback/rest";
+import { ParameterObject, api, get, getModelSchemaRef, param, response } from "@loopback/rest";
 import {
   OfferingOverrides,
   ScrollOverrides,
@@ -10,11 +10,13 @@ import {
 } from "@teloal/upound";
 import type { ItemKey } from "typed-adventureland";
 
-function makeOverrideSpec(name: string) {
+function makeOverrideSpec(name: string): Partial<ParameterObject> {
   return {
-    type: "number",
+    schema: {
+      type: "number",
+      default: getDefaultPrice(name),
+    },
     description: `Overrides the default price of a single ${name}.`,
-    default: getDefaultPrice(name),
   };
 }
 
@@ -44,8 +46,8 @@ export class UpoundController {
     @param.query.string("mode", {
       description:
         "How to compute the price. AVG uses the average chance, MIN uses the min chance and MAX uses the max chance.",
-      default: "AVG",
       schema: {
+        default: "AVG",
         type: "string",
         enum: ["AVG", "MIN", "MAX"],
       },
