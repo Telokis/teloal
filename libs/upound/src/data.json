@@ -194,10 +194,80 @@
   "level": 6,
   "scroll": "scroll1",
   "offering": null,
-  "sampleSize": 9,
-  "avgChance": 0.25196,
+  "sampleSize": 12,
+  "avgChance": 0.24897,
   "minChance": 0.24,
   "maxChance": 0.2705
+ },
+ "basher|6|scroll1|offering": {
+  "name": "basher",
+  "level": 6,
+  "scroll": "scroll1",
+  "offering": "offering",
+  "sampleSize": 1,
+  "avgChance": 0.3647,
+  "minChance": 0.3647,
+  "maxChance": 0.3647
+ },
+ "basher|6|scroll1|offeringp": {
+  "name": "basher",
+  "level": 6,
+  "scroll": "scroll1",
+  "offering": "offeringp",
+  "sampleSize": 1,
+  "avgChance": 0.33992,
+  "minChance": 0.33992,
+  "maxChance": 0.33992
+ },
+ "basher|6|scroll1|offeringx": {
+  "name": "basher",
+  "level": 6,
+  "scroll": "scroll1",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 0.42368,
+  "minChance": 0.42368,
+  "maxChance": 0.42368
+ },
+ "basher|6|scroll2|null": {
+  "name": "basher",
+  "level": 6,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 3,
+  "avgChance": 0.298,
+  "minChance": 0.298,
+  "maxChance": 0.298
+ },
+ "basher|6|scroll2|offering": {
+  "name": "basher",
+  "level": 6,
+  "scroll": "scroll2",
+  "offering": "offering",
+  "sampleSize": 1,
+  "avgChance": 0.4517,
+  "minChance": 0.4517,
+  "maxChance": 0.4517
+ },
+ "basher|6|scroll2|offeringp": {
+  "name": "basher",
+  "level": 6,
+  "scroll": "scroll2",
+  "offering": "offeringp",
+  "sampleSize": 1,
+  "avgChance": 0.42112,
+  "minChance": 0.42112,
+  "maxChance": 0.42112
+ },
+ "basher|6|scroll2|offeringx": {
+  "name": "basher",
+  "level": 6,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 0.52228,
+  "minChance": 0.52228,
+  "maxChance": 0.52228
  },
  "bataxe|0|scroll1|null": {
   "name": "bataxe",
@@ -384,7 +454,77 @@
   "level": 0,
   "scroll": "scroll1",
   "offering": null,
-  "sampleSize": 20,
+  "sampleSize": 23,
+  "avgChance": 1,
+  "minChance": 0.99998,
+  "maxChance": 1
+ },
+ "bcape|0|scroll1|offering": {
+  "name": "bcape",
+  "level": 0,
+  "scroll": "scroll1",
+  "offering": "offering",
+  "sampleSize": 1,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "bcape|0|scroll1|offeringp": {
+  "name": "bcape",
+  "level": 0,
+  "scroll": "scroll1",
+  "offering": "offeringp",
+  "sampleSize": 1,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "bcape|0|scroll1|offeringx": {
+  "name": "bcape",
+  "level": 0,
+  "scroll": "scroll1",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "bcape|0|scroll2|null": {
+  "name": "bcape",
+  "level": 0,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 4,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "bcape|0|scroll2|offering": {
+  "name": "bcape",
+  "level": 0,
+  "scroll": "scroll2",
+  "offering": "offering",
+  "sampleSize": 1,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "bcape|0|scroll2|offeringp": {
+  "name": "bcape",
+  "level": 0,
+  "scroll": "scroll2",
+  "offering": "offeringp",
+  "sampleSize": 2,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "bcape|0|scroll2|offeringx": {
+  "name": "bcape",
+  "level": 0,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 1,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
@@ -1244,7 +1384,7 @@
   "level": 0,
   "scroll": "cscroll1",
   "offering": "offeringp",
-  "sampleSize": 247,
+  "sampleSize": 276,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
@@ -1264,7 +1404,7 @@
   "level": 1,
   "scroll": "cscroll1",
   "offering": "offeringp",
-  "sampleSize": 81,
+  "sampleSize": 91,
   "avgChance": 0.9,
   "minChance": 0.9,
   "maxChance": 0.9
@@ -1294,8 +1434,8 @@
   "level": 2,
   "scroll": "cscroll1",
   "offering": "offeringp",
-  "sampleSize": 548,
-  "avgChance": 0.5669,
+  "sampleSize": 551,
+  "avgChance": 0.56708,
   "minChance": 0.5575,
   "maxChance": 0.6
  },
@@ -1314,8 +1454,8 @@
   "level": 3,
   "scroll": "cscroll2",
   "offering": "offering",
-  "sampleSize": 97,
-  "avgChance": 0.43587,
+  "sampleSize": 99,
+  "avgChance": 0.43533,
   "minChance": 0.3919,
   "maxChance": 0.45
  },
@@ -1514,8 +1654,8 @@
   "level": 7,
   "scroll": "scroll1",
   "offering": null,
-  "sampleSize": 1538,
-  "avgChance": 0.15831,
+  "sampleSize": 1544,
+  "avgChance": 0.15834,
   "minChance": 0.15,
   "maxChance": 0.18847
  },
@@ -1624,7 +1764,7 @@
   "level": 0,
   "scroll": "cscroll1",
   "offering": "offeringp",
-  "sampleSize": 247,
+  "sampleSize": 277,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
@@ -1644,7 +1784,7 @@
   "level": 1,
   "scroll": "cscroll1",
   "offering": "offeringp",
-  "sampleSize": 82,
+  "sampleSize": 91,
   "avgChance": 0.9,
   "minChance": 0.9,
   "maxChance": 0.9
@@ -1664,8 +1804,8 @@
   "level": 2,
   "scroll": "cscroll1",
   "offering": "offeringp",
-  "sampleSize": 564,
-  "avgChance": 0.56493,
+  "sampleSize": 568,
+  "avgChance": 0.56518,
   "minChance": 0.5575,
   "maxChance": 0.6
  },
@@ -1684,8 +1824,8 @@
   "level": 3,
   "scroll": "cscroll2",
   "offering": "offering",
-  "sampleSize": 106,
-  "avgChance": 0.42137,
+  "sampleSize": 107,
+  "avgChance": 0.42125,
   "minChance": 0.3919,
   "maxChance": 0.45
  },
@@ -3339,12 +3479,102 @@
   "minChance": 0.42,
   "maxChance": 0.42
  },
+ "fury|0|scroll2|null": {
+  "name": "fury",
+  "level": 0,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 8,
+  "avgChance": 0.97,
+  "minChance": 0.97,
+  "maxChance": 0.97
+ },
+ "fury|0|scroll2|offering": {
+  "name": "fury",
+  "level": 0,
+  "scroll": "scroll2",
+  "offering": "offering",
+  "sampleSize": 1,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
  "fury|0|scroll2|offeringp": {
   "name": "fury",
   "level": 0,
   "scroll": "scroll2",
   "offering": "offeringp",
-  "sampleSize": 6,
+  "sampleSize": 8,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "fury|0|scroll2|offeringx": {
+  "name": "fury",
+  "level": 0,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "fury|0|scroll3|null": {
+  "name": "fury",
+  "level": 0,
+  "scroll": "scroll3",
+  "offering": null,
+  "sampleSize": 3,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "fury|0|scroll3|offering": {
+  "name": "fury",
+  "level": 0,
+  "scroll": "scroll3",
+  "offering": "offering",
+  "sampleSize": 1,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "fury|0|scroll3|offeringp": {
+  "name": "fury",
+  "level": 0,
+  "scroll": "scroll3",
+  "offering": "offeringp",
+  "sampleSize": 1,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "fury|0|scroll3|offeringx": {
+  "name": "fury",
+  "level": 0,
+  "scroll": "scroll3",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "fury|1|scroll2|null": {
+  "name": "fury",
+  "level": 1,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 4,
+  "avgChance": 0.94,
+  "minChance": 0.94,
+  "maxChance": 0.94
+ },
+ "fury|1|scroll2|offering": {
+  "name": "fury",
+  "level": 1,
+  "scroll": "scroll2",
+  "offering": "offering",
+  "sampleSize": 1,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
@@ -3354,7 +3584,77 @@
   "level": 1,
   "scroll": "scroll2",
   "offering": "offeringp",
-  "sampleSize": 7,
+  "sampleSize": 9,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "fury|1|scroll2|offeringx": {
+  "name": "fury",
+  "level": 1,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "fury|1|scroll3|null": {
+  "name": "fury",
+  "level": 1,
+  "scroll": "scroll3",
+  "offering": null,
+  "sampleSize": 3,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "fury|1|scroll3|offering": {
+  "name": "fury",
+  "level": 1,
+  "scroll": "scroll3",
+  "offering": "offering",
+  "sampleSize": 1,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "fury|1|scroll3|offeringp": {
+  "name": "fury",
+  "level": 1,
+  "scroll": "scroll3",
+  "offering": "offeringp",
+  "sampleSize": 1,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "fury|1|scroll3|offeringx": {
+  "name": "fury",
+  "level": 1,
+  "scroll": "scroll3",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "fury|2|scroll2|null": {
+  "name": "fury",
+  "level": 2,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 4,
+  "avgChance": 0.92,
+  "minChance": 0.92,
+  "maxChance": 0.92
+ },
+ "fury|2|scroll2|offering": {
+  "name": "fury",
+  "level": 2,
+  "scroll": "scroll2",
+  "offering": "offering",
+  "sampleSize": 1,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
@@ -3364,50 +3664,340 @@
   "level": 2,
   "scroll": "scroll2",
   "offering": "offeringp",
-  "sampleSize": 7,
+  "sampleSize": 11,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
+ },
+ "fury|2|scroll2|offeringx": {
+  "name": "fury",
+  "level": 2,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "fury|2|scroll3|null": {
+  "name": "fury",
+  "level": 2,
+  "scroll": "scroll3",
+  "offering": null,
+  "sampleSize": 3,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "fury|2|scroll3|offering": {
+  "name": "fury",
+  "level": 2,
+  "scroll": "scroll3",
+  "offering": "offering",
+  "sampleSize": 1,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "fury|2|scroll3|offeringp": {
+  "name": "fury",
+  "level": 2,
+  "scroll": "scroll3",
+  "offering": "offeringp",
+  "sampleSize": 1,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "fury|2|scroll3|offeringx": {
+  "name": "fury",
+  "level": 2,
+  "scroll": "scroll3",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "fury|3|scroll2|null": {
+  "name": "fury",
+  "level": 3,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 4,
+  "avgChance": 0.64,
+  "minChance": 0.64,
+  "maxChance": 0.64
  },
  "fury|3|scroll2|offering": {
   "name": "fury",
   "level": 3,
   "scroll": "scroll2",
   "offering": "offering",
-  "sampleSize": 1,
+  "sampleSize": 8,
   "avgChance": 0.88,
   "minChance": 0.88,
   "maxChance": 0.88
+ },
+ "fury|3|scroll2|offeringp": {
+  "name": "fury",
+  "level": 3,
+  "scroll": "scroll2",
+  "offering": "offeringp",
+  "sampleSize": 1,
+  "avgChance": 0.736,
+  "minChance": 0.736,
+  "maxChance": 0.736
+ },
+ "fury|3|scroll2|offeringx": {
+  "name": "fury",
+  "level": 3,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 2,
+  "avgChance": 0.96,
+  "minChance": 0.96,
+  "maxChance": 0.96
+ },
+ "fury|3|scroll3|null": {
+  "name": "fury",
+  "level": 3,
+  "scroll": "scroll3",
+  "offering": null,
+  "sampleSize": 3,
+  "avgChance": 0.778,
+  "minChance": 0.778,
+  "maxChance": 0.778
  },
  "fury|3|scroll3|offering": {
   "name": "fury",
   "level": 3,
   "scroll": "scroll3",
   "offering": "offering",
-  "sampleSize": 8,
+  "sampleSize": 9,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
+ },
+ "fury|3|scroll3|offeringp": {
+  "name": "fury",
+  "level": 3,
+  "scroll": "scroll3",
+  "offering": "offeringp",
+  "sampleSize": 1,
+  "avgChance": 0.8947,
+  "minChance": 0.8947,
+  "maxChance": 0.8947
+ },
+ "fury|3|scroll3|offeringx": {
+  "name": "fury",
+  "level": 3,
+  "scroll": "scroll3",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 1,
+  "minChance": 1,
+  "maxChance": 1
+ },
+ "fury|4|scroll2|null": {
+  "name": "fury",
+  "level": 4,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 7,
+  "avgChance": 0.59679,
+  "minChance": 0.52,
+  "maxChance": 0.69918
+ },
+ "fury|4|scroll2|offering": {
+  "name": "fury",
+  "level": 4,
+  "scroll": "scroll2",
+  "offering": "offering",
+  "sampleSize": 3,
+  "avgChance": 0.76,
+  "minChance": 0.76,
+  "maxChance": 0.76
+ },
+ "fury|4|scroll2|offeringp": {
+  "name": "fury",
+  "level": 4,
+  "scroll": "scroll2",
+  "offering": "offeringp",
+  "sampleSize": 2,
+  "avgChance": 0.69358,
+  "minChance": 0.62717,
+  "maxChance": 0.76
+ },
+ "fury|4|scroll2|offeringx": {
+  "name": "fury",
+  "level": 4,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 2,
+  "avgChance": 0.88,
+  "minChance": 0.88,
+  "maxChance": 0.88
+ },
+ "fury|4|scroll3|null": {
+  "name": "fury",
+  "level": 4,
+  "scroll": "scroll3",
+  "offering": null,
+  "sampleSize": 9,
+  "avgChance": 0.71364,
+  "minChance": 0.634,
+  "maxChance": 0.81318
  },
  "fury|4|scroll3|offering": {
   "name": "fury",
   "level": 4,
   "scroll": "scroll3",
   "offering": "offering",
-  "sampleSize": 8,
+  "sampleSize": 18,
   "avgChance": 0.88,
   "minChance": 0.88,
   "maxChance": 0.88
+ },
+ "fury|4|scroll3|offeringp": {
+  "name": "fury",
+  "level": 4,
+  "scroll": "scroll3",
+  "offering": "offeringp",
+  "sampleSize": 3,
+  "avgChance": 0.79884,
+  "minChance": 0.75827,
+  "maxChance": 0.88
+ },
+ "fury|4|scroll3|offeringx": {
+  "name": "fury",
+  "level": 4,
+  "scroll": "scroll3",
+  "offering": "offeringx",
+  "sampleSize": 3,
+  "avgChance": 0.88,
+  "minChance": 0.88,
+  "maxChance": 0.88
+ },
+ "fury|5|scroll2|null": {
+  "name": "fury",
+  "level": 5,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 15,
+  "avgChance": 0.35779,
+  "minChance": 0.32312,
+  "maxChance": 0.42097
+ },
+ "fury|5|scroll2|offering": {
+  "name": "fury",
+  "level": 5,
+  "scroll": "scroll2",
+  "offering": "offering",
+  "sampleSize": 5,
+  "avgChance": 0.55595,
+  "minChance": 0.53976,
+  "maxChance": 0.56
+ },
+ "fury|5|scroll2|offeringp": {
+  "name": "fury",
+  "level": 5,
+  "scroll": "scroll2",
+  "offering": "offeringp",
+  "sampleSize": 5,
+  "avgChance": 0.44867,
+  "minChance": 0.39668,
+  "maxChance": 0.54345
+ },
+ "fury|5|scroll2|offeringx": {
+  "name": "fury",
+  "level": 5,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 5,
+  "avgChance": 0.65854,
+  "minChance": 0.59012,
+  "maxChance": 0.68
+ },
+ "fury|5|scroll3|null": {
+  "name": "fury",
+  "level": 5,
+  "scroll": "scroll3",
+  "offering": null,
+  "sampleSize": 18,
+  "avgChance": 0.44232,
+  "minChance": 0.39712,
+  "maxChance": 0.49497
  },
  "fury|5|scroll3|offering": {
   "name": "fury",
   "level": 5,
   "scroll": "scroll3",
   "offering": "offering",
-  "sampleSize": 5,
-  "avgChance": 0.6746,
-  "minChance": 0.653,
+  "sampleSize": 14,
+  "avgChance": 0.67545,
+  "minChance": 0.64336,
   "maxChance": 0.68
+ },
+ "fury|5|scroll3|offeringp": {
+  "name": "fury",
+  "level": 5,
+  "scroll": "scroll3",
+  "offering": "offeringp",
+  "sampleSize": 5,
+  "avgChance": 0.53377,
+  "minChance": 0.48178,
+  "maxChance": 0.62855
+ },
+ "fury|5|scroll3|offeringx": {
+  "name": "fury",
+  "level": 5,
+  "scroll": "scroll3",
+  "offering": "offeringx",
+  "sampleSize": 8,
+  "avgChance": 0.68,
+  "minChance": 0.68,
+  "maxChance": 0.68
+ },
+ "fury|6|scroll2|null": {
+  "name": "fury",
+  "level": 6,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 3,
+  "avgChance": 0.30388,
+  "minChance": 0.30388,
+  "maxChance": 0.30388
+ },
+ "fury|6|scroll2|offering": {
+  "name": "fury",
+  "level": 6,
+  "scroll": "scroll2",
+  "offering": "offering",
+  "sampleSize": 1,
+  "avgChance": 0.464,
+  "minChance": 0.464,
+  "maxChance": 0.464
+ },
+ "fury|6|scroll2|offeringp": {
+  "name": "fury",
+  "level": 6,
+  "scroll": "scroll2",
+  "offering": "offeringp",
+  "sampleSize": 1,
+  "avgChance": 0.39128,
+  "minChance": 0.39128,
+  "maxChance": 0.39128
+ },
+ "fury|6|scroll2|offeringx": {
+  "name": "fury",
+  "level": 6,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 0.592,
+  "minChance": 0.592,
+  "maxChance": 0.592
  },
  "gcape|0|scroll1|null": {
   "name": "gcape",
@@ -3849,15 +4439,45 @@
   "minChance": 0.1439,
   "maxChance": 0.1734
  },
+ "glolipop|9|scroll2|null": {
+  "name": "glolipop",
+  "level": 9,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 3,
+  "avgChance": 0.0311,
+  "minChance": 0.0311,
+  "maxChance": 0.0311
+ },
  "glolipop|9|scroll2|offering": {
   "name": "glolipop",
   "level": 9,
   "scroll": "scroll2",
   "offering": "offering",
-  "sampleSize": 1,
+  "sampleSize": 2,
   "avgChance": 0.048,
   "minChance": 0.048,
   "maxChance": 0.048
+ },
+ "glolipop|9|scroll2|offeringp": {
+  "name": "glolipop",
+  "level": 9,
+  "scroll": "scroll2",
+  "offering": "offeringp",
+  "sampleSize": 1,
+  "avgChance": 0.04566,
+  "minChance": 0.04566,
+  "maxChance": 0.04566
+ },
+ "glolipop|9|scroll2|offeringx": {
+  "name": "glolipop",
+  "level": 9,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 0.072,
+  "minChance": 0.072,
+  "maxChance": 0.072
  },
  "gloves|0|scroll0|null": {
   "name": "gloves",
@@ -4499,15 +5119,45 @@
   "minChance": 0.1633,
   "maxChance": 0.2095
  },
+ "harbringer|8|scroll2|null": {
+  "name": "harbringer",
+  "level": 8,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 3,
+  "avgChance": 0.06866,
+  "minChance": 0.06866,
+  "maxChance": 0.06866
+ },
  "harbringer|8|scroll2|offering": {
   "name": "harbringer",
   "level": 8,
   "scroll": "scroll2",
   "offering": "offering",
-  "sampleSize": 3,
+  "sampleSize": 4,
   "avgChance": 0.132,
   "minChance": 0.132,
   "maxChance": 0.132
+ },
+ "harbringer|8|scroll2|offeringp": {
+  "name": "harbringer",
+  "level": 8,
+  "scroll": "scroll2",
+  "offering": "offeringp",
+  "sampleSize": 1,
+  "avgChance": 0.08927,
+  "minChance": 0.08927,
+  "maxChance": 0.08927
+ },
+ "harbringer|8|scroll2|offeringx": {
+  "name": "harbringer",
+  "level": 8,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 0.15033,
+  "minChance": 0.15033,
+  "maxChance": 0.15033
  },
  "harmor|0|scroll2|null": {
   "name": "harmor",
@@ -5609,15 +6259,45 @@
   "minChance": 0.598,
   "maxChance": 0.742
  },
+ "lmace|5|scroll2|null": {
+  "name": "lmace",
+  "level": 5,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 3,
+  "avgChance": 0.32,
+  "minChance": 0.32,
+  "maxChance": 0.32
+ },
  "lmace|5|scroll2|offering": {
   "name": "lmace",
   "level": 5,
   "scroll": "scroll2",
   "offering": "offering",
-  "sampleSize": 84,
-  "avgChance": 0.55415,
+  "sampleSize": 85,
+  "avgChance": 0.55315,
   "minChance": 0.448,
   "maxChance": 0.56
+ },
+ "lmace|5|scroll2|offeringp": {
+  "name": "lmace",
+  "level": 5,
+  "scroll": "scroll2",
+  "offering": "offeringp",
+  "sampleSize": 1,
+  "avgChance": 0.37479,
+  "minChance": 0.37479,
+  "maxChance": 0.37479
+ },
+ "lmace|5|scroll2|offeringx": {
+  "name": "lmace",
+  "level": 5,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 0.50608,
+  "minChance": 0.50608,
+  "maxChance": 0.50608
  },
  "lmace|6|scroll2|offering": {
   "name": "lmace",
@@ -5629,15 +6309,45 @@
   "minChance": 0.3443,
   "maxChance": 0.464
  },
+ "lmace|7|scroll2|null": {
+  "name": "lmace",
+  "level": 7,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 3,
+  "avgChance": 0.13134,
+  "minChance": 0.13134,
+  "maxChance": 0.13134
+ },
  "lmace|7|scroll2|offering": {
   "name": "lmace",
   "level": 7,
   "scroll": "scroll2",
   "offering": "offering",
-  "sampleSize": 5,
-  "avgChance": 0.26,
-  "minChance": 0.26,
+  "sampleSize": 6,
+  "avgChance": 0.2546,
+  "minChance": 0.22762,
   "maxChance": 0.26
+ },
+ "lmace|7|scroll2|offeringp": {
+  "name": "lmace",
+  "level": 7,
+  "scroll": "scroll2",
+  "offering": "offeringp",
+  "sampleSize": 1,
+  "avgChance": 0.16376,
+  "minChance": 0.16376,
+  "maxChance": 0.16376
+ },
+ "lmace|7|scroll2|offeringx": {
+  "name": "lmace",
+  "level": 7,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 0.24974,
+  "minChance": 0.24974,
+  "maxChance": 0.24974
  },
  "lostearring|0|cscroll1|null": {
   "name": "lostearring",
@@ -5648,6 +6358,126 @@
   "avgChance": 0.8017,
   "minChance": 0.8,
   "maxChance": 0.8084
+ },
+ "lostearring|1|cscroll1|null": {
+  "name": "lostearring",
+  "level": 1,
+  "scroll": "cscroll1",
+  "offering": null,
+  "sampleSize": 8,
+  "avgChance": 0.6,
+  "minChance": 0.6,
+  "maxChance": 0.6
+ },
+ "lostearring|1|cscroll1|offering": {
+  "name": "lostearring",
+  "level": 1,
+  "scroll": "cscroll1",
+  "offering": "offering",
+  "sampleSize": 1,
+  "avgChance": 0.85,
+  "minChance": 0.85,
+  "maxChance": 0.85
+ },
+ "lostearring|1|cscroll1|offeringp": {
+  "name": "lostearring",
+  "level": 1,
+  "scroll": "cscroll1",
+  "offering": "offeringp",
+  "sampleSize": 34,
+  "avgChance": 0.8,
+  "minChance": 0.8,
+  "maxChance": 0.8
+ },
+ "lostearring|1|cscroll1|offeringx": {
+  "name": "lostearring",
+  "level": 1,
+  "scroll": "cscroll1",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 0.85,
+  "minChance": 0.85,
+  "maxChance": 0.85
+ },
+ "lostearring|1|cscroll2|null": {
+  "name": "lostearring",
+  "level": 1,
+  "scroll": "cscroll2",
+  "offering": null,
+  "sampleSize": 6,
+  "avgChance": 0.661,
+  "minChance": 0.661,
+  "maxChance": 0.661
+ },
+ "lostearring|1|cscroll2|offering": {
+  "name": "lostearring",
+  "level": 1,
+  "scroll": "cscroll2",
+  "offering": "offering",
+  "sampleSize": 2,
+  "avgChance": 0.85,
+  "minChance": 0.85,
+  "maxChance": 0.85
+ },
+ "lostearring|1|cscroll2|offeringp": {
+  "name": "lostearring",
+  "level": 1,
+  "scroll": "cscroll2",
+  "offering": "offeringp",
+  "sampleSize": 2,
+  "avgChance": 0.85,
+  "minChance": 0.85,
+  "maxChance": 0.85
+ },
+ "lostearring|1|cscroll2|offeringx": {
+  "name": "lostearring",
+  "level": 1,
+  "scroll": "cscroll2",
+  "offering": "offeringx",
+  "sampleSize": 2,
+  "avgChance": 0.85,
+  "minChance": 0.85,
+  "maxChance": 0.85
+ },
+ "lostearring|2|cscroll2|null": {
+  "name": "lostearring",
+  "level": 2,
+  "scroll": "cscroll2",
+  "offering": null,
+  "sampleSize": 26,
+  "avgChance": 0.33921,
+  "minChance": 0.3305,
+  "maxChance": 0.34875
+ },
+ "lostearring|2|cscroll2|offering": {
+  "name": "lostearring",
+  "level": 2,
+  "scroll": "cscroll2",
+  "offering": "offering",
+  "sampleSize": 20,
+  "avgChance": 0.51702,
+  "minChance": 0.4892,
+  "maxChance": 0.52
+ },
+ "lostearring|2|cscroll2|offeringp": {
+  "name": "lostearring",
+  "level": 2,
+  "scroll": "cscroll2",
+  "offering": "offeringp",
+  "sampleSize": 6,
+  "avgChance": 0.45546,
+  "minChance": 0.422,
+  "maxChance": 0.48159
+ },
+ "lostearring|2|cscroll2|offeringx": {
+  "name": "lostearring",
+  "level": 2,
+  "scroll": "cscroll2",
+  "offering": "offeringx",
+  "sampleSize": 5,
+  "avgChance": 0.55455,
+  "minChance": 0.5276,
+  "maxChance": 0.57
  },
  "luckbooster|0|cscroll1|null": {
   "name": "luckbooster",
@@ -5784,7 +6614,7 @@
   "level": 0,
   "scroll": "cscroll1",
   "offering": "offeringp",
-  "sampleSize": 19,
+  "sampleSize": 24,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
@@ -5814,8 +6644,8 @@
   "level": 1,
   "scroll": "cscroll2",
   "offering": "offeringp",
-  "sampleSize": 40,
-  "avgChance": 0.81544,
+  "sampleSize": 43,
+  "avgChance": 0.81848,
   "minChance": 0.8071,
   "maxChance": 0.8806
  },
@@ -5874,7 +6704,7 @@
   "level": 0,
   "scroll": "scroll0",
   "offering": null,
-  "sampleSize": 500,
+  "sampleSize": 501,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
@@ -5894,7 +6724,7 @@
   "level": 1,
   "scroll": "scroll1",
   "offering": null,
-  "sampleSize": 2,
+  "sampleSize": 4,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
@@ -5914,7 +6744,7 @@
   "level": 2,
   "scroll": "scroll1",
   "offering": null,
-  "sampleSize": 5,
+  "sampleSize": 7,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
@@ -5944,7 +6774,7 @@
   "level": 3,
   "scroll": "scroll1",
   "offering": "offeringp",
-  "sampleSize": 2,
+  "sampleSize": 4,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
@@ -5984,7 +6814,7 @@
   "level": 4,
   "scroll": "scroll2",
   "offering": "offeringp",
-  "sampleSize": 2,
+  "sampleSize": 4,
   "avgChance": 0.96,
   "minChance": 0.96,
   "maxChance": 0.96
@@ -6014,7 +6844,7 @@
   "level": 5,
   "scroll": "scroll2",
   "offering": "offeringp",
-  "sampleSize": 2,
+  "sampleSize": 4,
   "avgChance": 0.76,
   "minChance": 0.76,
   "maxChance": 0.76
@@ -6729,13 +7559,63 @@
   "minChance": 0.3102,
   "maxChance": 0.45
  },
+ "ololipop|8|scroll1|null": {
+  "name": "ololipop",
+  "level": 8,
+  "scroll": "scroll1",
+  "offering": null,
+  "sampleSize": 3,
+  "avgChance": 0.07277,
+  "minChance": 0.07277,
+  "maxChance": 0.07277
+ },
+ "ololipop|8|scroll1|offering": {
+  "name": "ololipop",
+  "level": 8,
+  "scroll": "scroll1",
+  "offering": "offering",
+  "sampleSize": 1,
+  "avgChance": 0.15696,
+  "minChance": 0.15696,
+  "maxChance": 0.15696
+ },
+ "ololipop|8|scroll1|offeringp": {
+  "name": "ololipop",
+  "level": 8,
+  "scroll": "scroll1",
+  "offering": "offeringp",
+  "sampleSize": 1,
+  "avgChance": 0.14,
+  "minChance": 0.14,
+  "maxChance": 0.14
+ },
+ "ololipop|8|scroll1|offeringx": {
+  "name": "ololipop",
+  "level": 8,
+  "scroll": "scroll1",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 0.21,
+  "minChance": 0.21,
+  "maxChance": 0.21
+ },
+ "ololipop|8|scroll2|null": {
+  "name": "ololipop",
+  "level": 8,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 3,
+  "avgChance": 0.09677,
+  "minChance": 0.09677,
+  "maxChance": 0.09677
+ },
  "ololipop|8|scroll2|offering": {
   "name": "ololipop",
   "level": 8,
   "scroll": "scroll2",
   "offering": "offering",
-  "sampleSize": 7,
-  "avgChance": 0.20371,
+  "sampleSize": 8,
+  "avgChance": 0.20237,
   "minChance": 0.1913,
   "maxChance": 0.21
  },
@@ -6744,9 +7624,19 @@
   "level": 8,
   "scroll": "scroll2",
   "offering": "offeringp",
-  "sampleSize": 14,
-  "avgChance": 0.2055,
+  "sampleSize": 15,
+  "avgChance": 0.20346,
   "minChance": 0.1712,
+  "maxChance": 0.21
+ },
+ "ololipop|8|scroll2|offeringx": {
+  "name": "ololipop",
+  "level": 8,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 0.21,
+  "minChance": 0.21,
   "maxChance": 0.21
  },
  "ololipop|9|scroll2|offering": {
@@ -6974,8 +7864,8 @@
   "level": 0,
   "scroll": "cscroll0",
   "offering": null,
-  "sampleSize": 429,
-  "avgChance": 0.99858,
+  "sampleSize": 445,
+  "avgChance": 0.9985,
   "minChance": 0.99,
   "maxChance": 1
  },
@@ -6994,8 +7884,8 @@
   "level": 1,
   "scroll": "cscroll1",
   "offering": null,
-  "sampleSize": 146,
-  "avgChance": 0.75108,
+  "sampleSize": 150,
+  "avgChance": 0.75122,
   "minChance": 0.75,
   "maxChance": 0.7613
  },
@@ -7034,8 +7924,8 @@
   "level": 2,
   "scroll": "cscroll1",
   "offering": "offeringp",
-  "sampleSize": 70,
-  "avgChance": 0.58177,
+  "sampleSize": 72,
+  "avgChance": 0.58149,
   "minChance": 0.5575,
   "maxChance": 0.6
  },
@@ -7074,8 +7964,8 @@
   "level": 0,
   "scroll": "cscroll0",
   "offering": null,
-  "sampleSize": 402,
-  "avgChance": 0.99861,
+  "sampleSize": 412,
+  "avgChance": 0.99857,
   "minChance": 0.99,
   "maxChance": 1
  },
@@ -7094,8 +7984,8 @@
   "level": 1,
   "scroll": "cscroll1",
   "offering": null,
-  "sampleSize": 148,
-  "avgChance": 0.75173,
+  "sampleSize": 152,
+  "avgChance": 0.75187,
   "minChance": 0.75,
   "maxChance": 0.7614
  },
@@ -7114,8 +8004,8 @@
   "level": 2,
   "scroll": "cscroll1",
   "offering": "offeringp",
-  "sampleSize": 62,
-  "avgChance": 0.58254,
+  "sampleSize": 64,
+  "avgChance": 0.58248,
   "minChance": 0.5575,
   "maxChance": 0.6
  },
@@ -7214,20 +8104,40 @@
   "level": 7,
   "scroll": "scroll2",
   "offering": null,
-  "sampleSize": 3,
+  "sampleSize": 6,
   "avgChance": 0.14,
   "minChance": 0.14,
   "maxChance": 0.14
+ },
+ "ornamentstaff|7|scroll2|offering": {
+  "name": "ornamentstaff",
+  "level": 7,
+  "scroll": "scroll2",
+  "offering": "offering",
+  "sampleSize": 1,
+  "avgChance": 0.22272,
+  "minChance": 0.22272,
+  "maxChance": 0.22272
  },
  "ornamentstaff|7|scroll2|offeringp": {
   "name": "ornamentstaff",
   "level": 7,
   "scroll": "scroll2",
   "offering": "offeringp",
-  "sampleSize": 7,
-  "avgChance": 0.17699,
+  "sampleSize": 8,
+  "avgChance": 0.17603,
   "minChance": 0.161,
   "maxChance": 0.1987
+ },
+ "ornamentstaff|7|scroll2|offeringx": {
+  "name": "ornamentstaff",
+  "level": 7,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 0.24207,
+  "minChance": 0.24207,
+  "maxChance": 0.24207
  },
  "ornamentstaff|8|scroll2|offering": {
   "name": "ornamentstaff",
@@ -7334,10 +8244,80 @@
   "level": 8,
   "scroll": "scroll1",
   "offering": null,
-  "sampleSize": 1111,
-  "avgChance": 0.07467,
+  "sampleSize": 1117,
+  "avgChance": 0.07465,
   "minChance": 0.07,
   "maxChance": 0.0857
+ },
+ "pants|8|scroll1|offering": {
+  "name": "pants",
+  "level": 8,
+  "scroll": "scroll1",
+  "offering": "offering",
+  "sampleSize": 2,
+  "avgChance": 0.14713,
+  "minChance": 0.14713,
+  "maxChance": 0.14713
+ },
+ "pants|8|scroll1|offeringp": {
+  "name": "pants",
+  "level": 8,
+  "scroll": "scroll1",
+  "offering": "offeringp",
+  "sampleSize": 2,
+  "avgChance": 0.13311,
+  "minChance": 0.13311,
+  "maxChance": 0.13311
+ },
+ "pants|8|scroll1|offeringx": {
+  "name": "pants",
+  "level": 8,
+  "scroll": "scroll1",
+  "offering": "offeringx",
+  "sampleSize": 2,
+  "avgChance": 0.21,
+  "minChance": 0.21,
+  "maxChance": 0.21
+ },
+ "pants|8|scroll2|null": {
+  "name": "pants",
+  "level": 8,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 7,
+  "avgChance": 0.09507,
+  "minChance": 0.09507,
+  "maxChance": 0.09507
+ },
+ "pants|8|scroll2|offering": {
+  "name": "pants",
+  "level": 8,
+  "scroll": "scroll2",
+  "offering": "offering",
+  "sampleSize": 3,
+  "avgChance": 0.18313,
+  "minChance": 0.18313,
+  "maxChance": 0.18313
+ },
+ "pants|8|scroll2|offeringp": {
+  "name": "pants",
+  "level": 8,
+  "scroll": "scroll2",
+  "offering": "offeringp",
+  "sampleSize": 2,
+  "avgChance": 0.16671,
+  "minChance": 0.16671,
+  "maxChance": 0.16671
+ },
+ "pants|8|scroll2|offeringx": {
+  "name": "pants",
+  "level": 8,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 2,
+  "avgChance": 0.21,
+  "minChance": 0.21,
+  "maxChance": 0.21
  },
  "pants|9|scroll2|null": {
   "name": "pants",
@@ -11409,13 +12389,23 @@
   "minChance": 0.598,
   "maxChance": 0.76
  },
+ "vattire|5|scroll2|null": {
+  "name": "vattire",
+  "level": 5,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 3,
+  "avgChance": 0.32,
+  "minChance": 0.32,
+  "maxChance": 0.32
+ },
  "vattire|5|scroll2|offering": {
   "name": "vattire",
   "level": 5,
   "scroll": "scroll2",
   "offering": "offering",
-  "sampleSize": 264,
-  "avgChance": 0.555,
+  "sampleSize": 265,
+  "avgChance": 0.55468,
   "minChance": 0.448,
   "maxChance": 0.56
  },
@@ -11424,18 +12414,38 @@
   "level": 5,
   "scroll": "scroll2",
   "offering": "offeringp",
-  "sampleSize": 23,
-  "avgChance": 0.40158,
+  "sampleSize": 24,
+  "avgChance": 0.40046,
   "minChance": 0.368,
   "maxChance": 0.5009
+ },
+ "vattire|5|scroll2|offeringx": {
+  "name": "vattire",
+  "level": 5,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 0.50608,
+  "minChance": 0.50608,
+  "maxChance": 0.50608
+ },
+ "vattire|6|scroll2|null": {
+  "name": "vattire",
+  "level": 6,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 3,
+  "avgChance": 0.232,
+  "minChance": 0.232,
+  "maxChance": 0.232
  },
  "vattire|6|scroll2|offering": {
   "name": "vattire",
   "level": 6,
   "scroll": "scroll2",
   "offering": "offering",
-  "sampleSize": 151,
-  "avgChance": 0.46055,
+  "sampleSize": 152,
+  "avgChance": 0.45986,
   "minChance": 0.3248,
   "maxChance": 0.464
  },
@@ -11444,10 +12454,20 @@
   "level": 6,
   "scroll": "scroll2",
   "offering": "offeringp",
-  "sampleSize": 1,
-  "avgChance": 0.2861,
-  "minChance": 0.2861,
+  "sampleSize": 2,
+  "avgChance": 0.28131,
+  "minChance": 0.27652,
   "maxChance": 0.2861
+ },
+ "vattire|6|scroll2|offeringx": {
+  "name": "vattire",
+  "level": 6,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 0.38533,
+  "minChance": 0.38533,
+  "maxChance": 0.38533
  },
  "vattire|7|scroll2|offering": {
   "name": "vattire",
@@ -11639,15 +12659,45 @@
   "minChance": 0.4516,
   "maxChance": 0.56
  },
+ "vdagger|6|scroll2|null": {
+  "name": "vdagger",
+  "level": 6,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 3,
+  "avgChance": 0.232,
+  "minChance": 0.232,
+  "maxChance": 0.232
+ },
  "vdagger|6|scroll2|offering": {
   "name": "vdagger",
   "level": 6,
   "scroll": "scroll2",
   "offering": "offering",
-  "sampleSize": 43,
-  "avgChance": 0.4639,
-  "minChance": 0.4596,
+  "sampleSize": 44,
+  "avgChance": 0.46144,
+  "minChance": 0.35591,
   "maxChance": 0.464
+ },
+ "vdagger|6|scroll2|offeringp": {
+  "name": "vdagger",
+  "level": 6,
+  "scroll": "scroll2",
+  "offering": "offeringp",
+  "sampleSize": 1,
+  "avgChance": 0.27652,
+  "minChance": 0.27652,
+  "maxChance": 0.27652
+ },
+ "vdagger|6|scroll2|offeringx": {
+  "name": "vdagger",
+  "level": 6,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 0.38533,
+  "minChance": 0.38533,
+  "maxChance": 0.38533
  },
  "vdagger|7|scroll2|offering": {
   "name": "vdagger",
@@ -11849,25 +12899,85 @@
   "minChance": 0.728,
   "maxChance": 0.76
  },
+ "vhammer|5|scroll2|null": {
+  "name": "vhammer",
+  "level": 5,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 3,
+  "avgChance": 0.32,
+  "minChance": 0.32,
+  "maxChance": 0.32
+ },
  "vhammer|5|scroll2|offering": {
   "name": "vhammer",
   "level": 5,
   "scroll": "scroll2",
   "offering": "offering",
-  "sampleSize": 56,
-  "avgChance": 0.55987,
-  "minChance": 0.5548,
+  "sampleSize": 57,
+  "avgChance": 0.55829,
+  "minChance": 0.46973,
   "maxChance": 0.56
+ },
+ "vhammer|5|scroll2|offeringp": {
+  "name": "vhammer",
+  "level": 5,
+  "scroll": "scroll2",
+  "offering": "offeringp",
+  "sampleSize": 1,
+  "avgChance": 0.37479,
+  "minChance": 0.37479,
+  "maxChance": 0.37479
+ },
+ "vhammer|5|scroll2|offeringx": {
+  "name": "vhammer",
+  "level": 5,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 0.50608,
+  "minChance": 0.50608,
+  "maxChance": 0.50608
+ },
+ "vhammer|6|scroll2|null": {
+  "name": "vhammer",
+  "level": 6,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 3,
+  "avgChance": 0.232,
+  "minChance": 0.232,
+  "maxChance": 0.232
  },
  "vhammer|6|scroll2|offering": {
   "name": "vhammer",
   "level": 6,
   "scroll": "scroll2",
   "offering": "offering",
-  "sampleSize": 29,
-  "avgChance": 0.464,
-  "minChance": 0.464,
+  "sampleSize": 30,
+  "avgChance": 0.4604,
+  "minChance": 0.35591,
   "maxChance": 0.464
+ },
+ "vhammer|6|scroll2|offeringp": {
+  "name": "vhammer",
+  "level": 6,
+  "scroll": "scroll2",
+  "offering": "offeringp",
+  "sampleSize": 1,
+  "avgChance": 0.27652,
+  "minChance": 0.27652,
+  "maxChance": 0.27652
+ },
+ "vhammer|6|scroll2|offeringx": {
+  "name": "vhammer",
+  "level": 6,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 0.38533,
+  "minChance": 0.38533,
+  "maxChance": 0.38533
  },
  "vhammer|6|scroll3|offering": {
   "name": "vhammer",
@@ -13499,6 +14609,46 @@
   "minChance": 0.464,
   "maxChance": 0.464
  },
+ "xarmor|7|scroll2|null": {
+  "name": "xarmor",
+  "level": 7,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 3,
+  "avgChance": 0.13134,
+  "minChance": 0.13134,
+  "maxChance": 0.13134
+ },
+ "xarmor|7|scroll2|offering": {
+  "name": "xarmor",
+  "level": 7,
+  "scroll": "scroll2",
+  "offering": "offering",
+  "sampleSize": 1,
+  "avgChance": 0.22762,
+  "minChance": 0.22762,
+  "maxChance": 0.22762
+ },
+ "xarmor|7|scroll2|offeringp": {
+  "name": "xarmor",
+  "level": 7,
+  "scroll": "scroll2",
+  "offering": "offeringp",
+  "sampleSize": 1,
+  "avgChance": 0.16376,
+  "minChance": 0.16376,
+  "maxChance": 0.16376
+ },
+ "xarmor|7|scroll2|offeringx": {
+  "name": "xarmor",
+  "level": 7,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 0.24974,
+  "minChance": 0.24974,
+  "maxChance": 0.24974
+ },
  "xboots|0|scroll2|offeringp": {
   "name": "xboots",
   "level": 0,
@@ -13779,15 +14929,45 @@
   "minChance": 0.598,
   "maxChance": 0.7229
  },
+ "xhelmet|5|scroll2|null": {
+  "name": "xhelmet",
+  "level": 5,
+  "scroll": "scroll2",
+  "offering": null,
+  "sampleSize": 3,
+  "avgChance": 0.32,
+  "minChance": 0.32,
+  "maxChance": 0.32
+ },
  "xhelmet|5|scroll2|offering": {
   "name": "xhelmet",
   "level": 5,
   "scroll": "scroll2",
   "offering": "offering",
-  "sampleSize": 16,
-  "avgChance": 0.55508,
-  "minChance": 0.5253,
+  "sampleSize": 17,
+  "avgChance": 0.55005,
+  "minChance": 0.46973,
   "maxChance": 0.56
+ },
+ "xhelmet|5|scroll2|offeringp": {
+  "name": "xhelmet",
+  "level": 5,
+  "scroll": "scroll2",
+  "offering": "offeringp",
+  "sampleSize": 1,
+  "avgChance": 0.37479,
+  "minChance": 0.37479,
+  "maxChance": 0.37479
+ },
+ "xhelmet|5|scroll2|offeringx": {
+  "name": "xhelmet",
+  "level": 5,
+  "scroll": "scroll2",
+  "offering": "offeringx",
+  "sampleSize": 1,
+  "avgChance": 0.50608,
+  "minChance": 0.50608,
+  "maxChance": 0.50608
  },
  "xhelmet|6|scroll2|offering": {
   "name": "xhelmet",
