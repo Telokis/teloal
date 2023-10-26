@@ -1684,8 +1684,8 @@
   "level": 9,
   "scroll": "scroll2",
   "offering": null,
-  "sampleSize": 21,
-  "avgChance": 0.02569,
+  "sampleSize": 25,
+  "avgChance": 0.02559,
   "minChance": 0.024,
   "maxChance": 0.02756
  },
@@ -4934,7 +4934,7 @@
   "level": 0,
   "scroll": "scroll2",
   "offering": "offeringp",
-  "sampleSize": 1,
+  "sampleSize": 19,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
@@ -4954,7 +4954,7 @@
   "level": 1,
   "scroll": "scroll2",
   "offering": "offeringp",
-  "sampleSize": 4,
+  "sampleSize": 21,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
@@ -4974,7 +4974,7 @@
   "level": 2,
   "scroll": "scroll2",
   "offering": "offeringp",
-  "sampleSize": 14,
+  "sampleSize": 43,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
@@ -4984,7 +4984,7 @@
   "level": 3,
   "scroll": "scroll2",
   "offering": "offering",
-  "sampleSize": 8,
+  "sampleSize": 38,
   "avgChance": 0.88,
   "minChance": 0.88,
   "maxChance": 0.88
@@ -5004,10 +5004,10 @@
   "level": 4,
   "scroll": "scroll2",
   "offering": "offering",
-  "sampleSize": 8,
-  "avgChance": 0.728,
+  "sampleSize": 34,
+  "avgChance": 0.73246,
   "minChance": 0.728,
-  "maxChance": 0.728
+  "maxChance": 0.76
  },
  "handofmidas|4|scroll2|offeringp": {
   "name": "handofmidas",
@@ -5024,10 +5024,10 @@
   "level": 5,
   "scroll": "scroll2",
   "offering": "offering",
-  "sampleSize": 8,
-  "avgChance": 0.483,
+  "sampleSize": 22,
+  "avgChance": 0.48068,
   "minChance": 0.448,
-  "maxChance": 0.52407
+  "maxChance": 0.56
  },
  "handofmidas|5|scroll2|offeringp": {
   "name": "handofmidas",
@@ -5044,8 +5044,8 @@
   "level": 6,
   "scroll": "scroll2",
   "offering": "offering",
-  "sampleSize": 12,
-  "avgChance": 0.41635,
+  "sampleSize": 20,
+  "avgChance": 0.39559,
   "minChance": 0.3248,
   "maxChance": 0.464
  },
@@ -5484,7 +5484,7 @@
   "level": 0,
   "scroll": "scroll0",
   "offering": null,
-  "sampleSize": 32399,
+  "sampleSize": 35581,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
@@ -5494,7 +5494,7 @@
   "level": 1,
   "scroll": "scroll0",
   "offering": null,
-  "sampleSize": 91366,
+  "sampleSize": 94956,
   "avgChance": 0.98,
   "minChance": 0.98,
   "maxChance": 0.98
@@ -5504,8 +5504,8 @@
   "level": 2,
   "scroll": "scroll0",
   "offering": null,
-  "sampleSize": 271825,
-  "avgChance": 0.95355,
+  "sampleSize": 275228,
+  "avgChance": 0.95356,
   "minChance": 0.95,
   "maxChance": 1
  },
@@ -5514,7 +5514,7 @@
   "level": 3,
   "scroll": "scroll0",
   "offering": null,
-  "sampleSize": 328327,
+  "sampleSize": 333373,
   "avgChance": 0.71377,
   "minChance": 0.7,
   "maxChance": 0.9147
@@ -5524,8 +5524,8 @@
   "level": 4,
   "scroll": "scroll0",
   "offering": null,
-  "sampleSize": 236491,
-  "avgChance": 0.62244,
+  "sampleSize": 240170,
+  "avgChance": 0.62245,
   "minChance": 0.6002,
   "maxChance": 0.84
  },
@@ -5544,7 +5544,7 @@
   "level": 5,
   "scroll": "scroll0",
   "offering": null,
-  "sampleSize": 148337,
+  "sampleSize": 150645,
   "avgChance": 0.42012,
   "minChance": 0.4,
   "maxChance": 0.5454
@@ -5564,8 +5564,8 @@
   "level": 6,
   "scroll": "scroll0",
   "offering": null,
-  "sampleSize": 62918,
-  "avgChance": 0.26674,
+  "sampleSize": 63934,
+  "avgChance": 0.26671,
   "minChance": 0.25,
   "maxChance": 0.3307
  },
@@ -5584,8 +5584,8 @@
   "level": 7,
   "scroll": "scroll1",
   "offering": null,
-  "sampleSize": 16899,
-  "avgChance": 0.16,
+  "sampleSize": 17199,
+  "avgChance": 0.16006,
   "minChance": 0.15,
   "maxChance": 0.1953
  },
@@ -5614,8 +5614,8 @@
   "level": 8,
   "scroll": "scroll1",
   "offering": null,
-  "sampleSize": 2860,
-  "avgChance": 0.07518,
+  "sampleSize": 2898,
+  "avgChance": 0.07526,
   "minChance": 0.07,
   "maxChance": 0.08715
  },
@@ -5634,8 +5634,8 @@
   "level": 9,
   "scroll": "scroll2",
   "offering": null,
-  "sampleSize": 152,
-  "avgChance": 0.0255,
+  "sampleSize": 156,
+  "avgChance": 0.02547,
   "minChance": 0.024,
   "maxChance": 0.02756
  },
@@ -7424,7 +7424,7 @@
   "level": 0,
   "scroll": "scroll0",
   "offering": null,
-  "sampleSize": 68,
+  "sampleSize": 371,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
@@ -7444,7 +7444,7 @@
   "level": 1,
   "scroll": "scroll1",
   "offering": null,
-  "sampleSize": 29,
+  "sampleSize": 375,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
@@ -7464,7 +7464,7 @@
   "level": 2,
   "scroll": "scroll1",
   "offering": null,
-  "sampleSize": 155,
+  "sampleSize": 509,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
@@ -7484,8 +7484,8 @@
   "level": 3,
   "scroll": "scroll1",
   "offering": null,
-  "sampleSize": 121,
-  "avgChance": 0.86842,
+  "sampleSize": 628,
+  "avgChance": 0.88661,
   "minChance": 0.8569,
   "maxChance": 1
  },
@@ -7494,7 +7494,7 @@
   "level": 3,
   "scroll": "scroll1",
   "offering": "offeringp",
-  "sampleSize": 56,
+  "sampleSize": 92,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
@@ -7524,17 +7524,17 @@
   "level": 4,
   "scroll": "scroll1",
   "offering": null,
-  "sampleSize": 100,
-  "avgChance": 0.76155,
+  "sampleSize": 565,
+  "avgChance": 0.7864,
   "minChance": 0.7504,
-  "maxChance": 0.8044
+  "maxChance": 0.87168
  },
  "ololipop|4|scroll1|offeringp": {
   "name": "ololipop",
   "level": 4,
   "scroll": "scroll1",
   "offering": "offeringp",
-  "sampleSize": 55,
+  "sampleSize": 92,
   "avgChance": 0.96,
   "minChance": 0.96,
   "maxChance": 0.96
@@ -7564,17 +7564,17 @@
   "level": 5,
   "scroll": "scroll1",
   "offering": null,
-  "sampleSize": 66,
-  "avgChance": 0.52628,
-  "minChance": 0.5163,
-  "maxChance": 0.5677
+  "sampleSize": 404,
+  "avgChance": 0.53896,
+  "minChance": 0.51066,
+  "maxChance": 0.64044
  },
  "ololipop|5|scroll1|offeringp": {
   "name": "ololipop",
   "level": 5,
   "scroll": "scroll1",
   "offering": "offeringp",
-  "sampleSize": 68,
+  "sampleSize": 152,
   "avgChance": 0.76,
   "minChance": 0.76,
   "maxChance": 0.76
@@ -7614,9 +7614,9 @@
   "level": 6,
   "scroll": "scroll1",
   "offering": "offeringp",
-  "sampleSize": 44,
-  "avgChance": 0.61,
-  "minChance": 0.61,
+  "sampleSize": 278,
+  "avgChance": 0.60954,
+  "minChance": 0.59717,
   "maxChance": 0.61
  },
  "ololipop|6|scroll2|null": {
@@ -7654,9 +7654,9 @@
   "level": 7,
   "scroll": "scroll1",
   "offering": "offeringp",
-  "sampleSize": 41,
-  "avgChance": 0.45,
-  "minChance": 0.45,
+  "sampleSize": 183,
+  "avgChance": 0.44133,
+  "minChance": 0.38928,
   "maxChance": 0.45
  },
  "ololipop|7|scroll2|offering": {
@@ -7734,8 +7734,8 @@
   "level": 8,
   "scroll": "scroll2",
   "offering": "offering",
-  "sampleSize": 31,
-  "avgChance": 0.20543,
+  "sampleSize": 49,
+  "avgChance": 0.20711,
   "minChance": 0.18687,
   "maxChance": 0.21
  },
@@ -7744,8 +7744,8 @@
   "level": 8,
   "scroll": "scroll2",
   "offering": "offeringp",
-  "sampleSize": 15,
-  "avgChance": 0.20346,
+  "sampleSize": 100,
+  "avgChance": 0.20666,
   "minChance": 0.1712,
   "maxChance": 0.21
  },
@@ -7774,7 +7774,7 @@
   "level": 9,
   "scroll": "scroll2",
   "offering": "offering",
-  "sampleSize": 2,
+  "sampleSize": 14,
   "avgChance": 0.048,
   "minChance": 0.048,
   "maxChance": 0.048
@@ -7784,9 +7784,9 @@
   "level": 9,
   "scroll": "scroll2",
   "offering": "offeringp",
-  "sampleSize": 1,
-  "avgChance": 0.04599,
-  "minChance": 0.04599,
+  "sampleSize": 29,
+  "avgChance": 0.04194,
+  "minChance": 0.03568,
   "maxChance": 0.04599
  },
  "ololipop|9|scroll2|offeringx": {
@@ -8054,8 +8054,8 @@
   "level": 0,
   "scroll": "cscroll0",
   "offering": null,
-  "sampleSize": 957,
-  "avgChance": 0.99477,
+  "sampleSize": 975,
+  "avgChance": 0.99473,
   "minChance": 0.99,
   "maxChance": 1
  },
@@ -8074,8 +8074,8 @@
   "level": 1,
   "scroll": "cscroll1",
   "offering": null,
-  "sampleSize": 320,
-  "avgChance": 0.75138,
+  "sampleSize": 326,
+  "avgChance": 0.7514,
   "minChance": 0.75,
   "maxChance": 0.7613
  },
@@ -8154,8 +8154,8 @@
   "level": 0,
   "scroll": "cscroll0",
   "offering": null,
-  "sampleSize": 908,
-  "avgChance": 0.99464,
+  "sampleSize": 924,
+  "avgChance": 0.99463,
   "minChance": 0.99,
   "maxChance": 1
  },
@@ -8174,8 +8174,8 @@
   "level": 1,
   "scroll": "cscroll1",
   "offering": null,
-  "sampleSize": 314,
-  "avgChance": 0.75157,
+  "sampleSize": 320,
+  "avgChance": 0.75158,
   "minChance": 0.75,
   "maxChance": 0.7614
  },
@@ -8194,8 +8194,8 @@
   "level": 2,
   "scroll": "cscroll1",
   "offering": "offeringp",
-  "sampleSize": 106,
-  "avgChance": 0.57472,
+  "sampleSize": 108,
+  "avgChance": 0.5744,
   "minChance": 0.5575,
   "maxChance": 0.6
  },
@@ -8424,7 +8424,7 @@
   "level": 0,
   "scroll": "scroll0",
   "offering": null,
-  "sampleSize": 34034,
+  "sampleSize": 35225,
   "avgChance": 1,
   "minChance": 1,
   "maxChance": 1
@@ -8434,7 +8434,7 @@
   "level": 1,
   "scroll": "scroll0",
   "offering": null,
-  "sampleSize": 53929,
+  "sampleSize": 55303,
   "avgChance": 0.98,
   "minChance": 0.98,
   "maxChance": 0.98
@@ -8444,8 +8444,8 @@
   "level": 2,
   "scroll": "scroll0",
   "offering": null,
-  "sampleSize": 121250,
-  "avgChance": 0.95368,
+  "sampleSize": 122522,
+  "avgChance": 0.95369,
   "minChance": 0.95,
   "maxChance": 1
  },
@@ -8454,8 +8454,8 @@
   "level": 3,
   "scroll": "scroll0",
   "offering": null,
-  "sampleSize": 158190,
-  "avgChance": 0.71384,
+  "sampleSize": 160108,
+  "avgChance": 0.71386,
   "minChance": 0.7,
   "maxChance": 0.86744
  },
@@ -8464,7 +8464,7 @@
   "level": 4,
   "scroll": "scroll0",
   "offering": null,
-  "sampleSize": 115629,
+  "sampleSize": 116919,
   "avgChance": 0.62249,
   "minChance": 0.6002,
   "maxChance": 0.84
@@ -8474,8 +8474,8 @@
   "level": 5,
   "scroll": "scroll0",
   "offering": null,
-  "sampleSize": 72960,
-  "avgChance": 0.41994,
+  "sampleSize": 73780,
+  "avgChance": 0.41995,
   "minChance": 0.4,
   "maxChance": 0.53281
  },
@@ -8484,7 +8484,7 @@
   "level": 6,
   "scroll": "scroll0",
   "offering": null,
-  "sampleSize": 30954,
+  "sampleSize": 31278,
   "avgChance": 0.26626,
   "minChance": 0.25,
   "maxChance": 0.332
@@ -8494,8 +8494,8 @@
   "level": 7,
   "scroll": "scroll1",
   "offering": null,
-  "sampleSize": 8300,
-  "avgChance": 0.15982,
+  "sampleSize": 8382,
+  "avgChance": 0.1598,
   "minChance": 0.15,
   "maxChance": 0.19533
  },
@@ -8504,8 +8504,8 @@
   "level": 8,
   "scroll": "scroll1",
   "offering": null,
-  "sampleSize": 1353,
-  "avgChance": 0.0747,
+  "sampleSize": 1379,
+  "avgChance": 0.07462,
   "minChance": 0.07,
   "maxChance": 0.0857
  },
@@ -8584,8 +8584,8 @@
   "level": 9,
   "scroll": "scroll2",
   "offering": null,
-  "sampleSize": 70,
-  "avgChance": 0.02568,
+  "sampleSize": 88,
+  "avgChance": 0.02545,
   "minChance": 0.024,
   "maxChance": 0.0276
  },
