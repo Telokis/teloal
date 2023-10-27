@@ -6,11 +6,16 @@ import { cache } from "@teloal/lb4-cache";
 import { parseCharacters, AlCharacter } from "@teloal/parse-character";
 import { AlMerchants } from "../types/AlMerchants";
 import { AlMerchant } from "../models";
+import { repository } from "@loopback/repository";
+import { AlCharacterRepository } from "../repositories";
 
 @api({ basePath: "/v1/al" })
 export class AdventureLandController {
   @inject("services.AdventureLand")
   protected alService: AdventureLandService;
+
+  @repository(AlCharacterRepository)
+  protected alCharRepo: AlCharacterRepository;
 
   @cache({ ttl: 5 })
   @get("/character/{name}")
@@ -34,6 +39,10 @@ export class AdventureLandController {
     if (!char) {
       throw new HttpErrors.NotFound(`The character "${name}" doesn't exist.`);
     }
+
+    const res = await this.alCharRepo.upsert(char);
+
+    console.log(res);
 
     return char;
   }

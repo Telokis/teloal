@@ -7,4 +7,12 @@ declare module "config" {
     url: string;
     token: string | undefined;
   };
+
+  export const mongo: {
+    host: string;
+    port: number;
+    user: string;
+    password: string;
+    database: string;
+  };
 }

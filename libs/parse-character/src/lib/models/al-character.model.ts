@@ -1,4 +1,4 @@
-import { Model, model, property } from "@loopback/repository";
+import { Entity, Model, model, property } from "@loopback/repository";
 import type { ClassKey, SlotType } from "typed-adventureland";
 import { ALCharacterCleanSlot, AlCharacterItem } from "./al-character-item.model";
 
@@ -72,8 +72,9 @@ export class AlCharacterItemSlots extends Model {
     required: ["name", "level", "ctype", "slots"],
   },
 })
-export class AlCharacter extends Model implements ALCharacterDefinition {
+export class AlCharacter extends Entity implements ALCharacterDefinition {
   @property({
+    id: true,
     description: "Name of the character.",
   })
   name: string;

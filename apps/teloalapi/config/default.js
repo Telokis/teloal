@@ -25,4 +25,8 @@ module.exports = {
   al: {
     url: urlDefault(process.env.AL_URL, "https://adventure.land"),
   },
+  mongo: {
+    port: parseIntDefault(process.env.MONGO_PORT, 10, 27027),
+    database: "teloal",
+  },
 };

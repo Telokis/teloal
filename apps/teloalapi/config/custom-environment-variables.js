@@ -3,4 +3,10 @@ module.exports = {
   al: {
     token: "AL_TOKEN",
   },
+  mongo: {
+    host: "MONGO_HOST",
+    user: "MONGO_USER",
+    password: "MONGO_PASSWORD",
+    database: "MONGO_DATABASE",
+  },
 };
