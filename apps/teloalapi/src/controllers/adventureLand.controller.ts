@@ -1,16 +1,25 @@
 import { inject } from "@loopback/core";
 import { HttpErrors, api, get, getModelSchemaRef, param, response } from "@loopback/rest";
 import { NotFoundErrorSchema } from "../schemas/NotFoundError";
-import { AdventureLandService } from "../services";
+import { AdventureLandService } from "../services/adventureLand.service";
 import { cache } from "@teloal/lb4-cache";
 import { parseCharacters, AlCharacter } from "@teloal/parse-character";
 import { AlMerchants } from "../types/AlMerchants";
-import { AlMerchant } from "../models";
+import { AlMerchant } from "../models/alMerchant.model";
+import { repository } from "@loopback/repository";
+import { AlCharacterRepository } from "../repositories/alCharacter.repository";
+import { AlGameDataRepository } from "../repositories/alGameData.repository";
 
 @api({ basePath: "/v1/al" })
 export class AdventureLandController {
   @inject("services.AdventureLand")
   protected alService: AdventureLandService;
+
+  @repository(AlCharacterRepository)
+  protected alCharRepo: AlCharacterRepository;
+
+  @repository(AlGameDataRepository)
+  protected alGameDataRepo: AlGameDataRepository;
 
   @cache({ ttl: 5 })
   @get("/character/{name}")
@@ -113,11 +122,13 @@ export class AdventureLandController {
     },
   })
   async getData(): Promise<string> {
-    const html = await this.alService.getDataPage();
+    const entry = await this.alGameDataRepo.findOne({ order: ["createdAt DESC"] });
 
-    const json = html.trim().replace(/^[^{]+?(\{.*?\});$/i, "$1");
+    if (!entry) {
+      throw new HttpErrors.NotFound(`There is no G data stored yet.`);
+    }
 
-    return json;
+    return entry.json;
   }
 
   @cache({ ttl: 75 })

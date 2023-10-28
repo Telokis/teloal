@@ -9,6 +9,9 @@ import { ServiceMixin } from "@loopback/service-proxy";
 import path from "path";
 import { MySequence } from "./sequence";
 import { CacheComponent } from "@teloal/lb4-cache";
+import { CronComponent } from "@loopback/cron";
+import { CronBooter } from "./booters/cron.booter";
+import config from "config";
 
 export { ApplicationConfig };
 
@@ -31,6 +34,9 @@ export class TeloAlApiApplication extends BootMixin(
       path: "/swagger",
     });
     this.component(RestExplorerComponent);
+
+    // Enable cron jobs
+    this.component(CronComponent);
 
     // Add prometheus metrics
     this.configure(MetricsBindings.COMPONENT).to({
@@ -66,5 +72,10 @@ export class TeloAlApiApplication extends BootMixin(
         nested: true,
       },
     };
+
+    if (!config.disableAllCrons) {
+      // Register custom booter loading cronjobs
+      this.booters(CronBooter);
+    }
   }
 }

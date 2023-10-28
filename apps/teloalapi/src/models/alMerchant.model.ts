@@ -1,7 +1,7 @@
 import { Model, model, property } from "@loopback/repository";
 import type { MapKey } from "typed-adventureland";
 import { AlMerchantsEntry } from "../types/AlMerchants";
-import { AlMerchantTradeEntry } from "./al-merchant-trade-entry.model";
+import { AlMerchantTradeEntry } from "./alMerchantTradeEntry.model";
 
 @model()
 export class AlMerchantTradeSlots extends Model {
