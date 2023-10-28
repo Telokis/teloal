@@ -93,24 +93,6 @@ export class AdventureLandController {
     return chars;
   }
 
-  @cache({ ttl: 45 })
-  @get("/merchants")
-  @response(200, {
-    description: "Returns a list of the online merchants as scraped from the adventure land page.",
-    content: {
-      "application/json": {
-        schema: { type: "array", items: getModelSchemaRef(AlCharacter) },
-      },
-    },
-  })
-  async getMerchants(): Promise<Array<AlCharacter>> {
-    const html = await this.alService.getMerchantsPage();
-
-    const chars = await parseCharacters(html);
-
-    return chars;
-  }
-
   @cache({ ttl: 60 })
   @get("/data")
   @response(200, {
@@ -142,7 +124,7 @@ export class AdventureLandController {
     },
   })
   async getTrades(): Promise<Array<AlMerchant>> {
-    const json = JSON.parse(await this.alService.getMerchants()) as AlMerchants;
+    const json = JSON.parse(await this.alService.getMerchantsTrades()) as AlMerchants;
 
     // @ts-ignore
     return json[0].chars.map((merchant) => new AlMerchant(merchant));

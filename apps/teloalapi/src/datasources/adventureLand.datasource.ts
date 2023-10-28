@@ -41,16 +41,6 @@ const dataSourceConfig = {
       template: {
         method: "GET",
         fullResponse: false, // We only want the body
-        url: `${config.al.url}/merchants`,
-      },
-      functions: {
-        getMerchantsPage: [],
-      },
-    },
-    {
-      template: {
-        method: "GET",
-        fullResponse: false, // We only want the body
         url: `${config.al.url}/data.js`,
       },
       functions: {
@@ -69,7 +59,7 @@ const dataSourceConfig = {
         body: "method=pull_merchants&arguments=%7B%7D",
       },
       functions: {
-        getMerchants: [],
+        getMerchantsTrades: [],
       },
     },
   ],

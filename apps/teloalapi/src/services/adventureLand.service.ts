@@ -7,11 +7,8 @@ export interface AdventureLandService {
   getPlayerPage(name: string): Promise<string>;
   getCharactersPage(): Promise<string>;
 
-  /** Retrieves the html source of the page listing all currently online merchants. */
-  getMerchantsPage(): Promise<string>;
-
   /** Retrieves the json listing all currently trading merchants and their goods. */
-  getMerchants(): Promise<string>;
+  getMerchantsTrades(): Promise<string>;
 
   getDataPage(): Promise<string>;
 }
