@@ -9,4 +9,9 @@ module.exports = {
     password: "MONGO_PASSWORD",
     database: "MONGO_DATABASE",
   },
+  crons: {
+    gameDataFetcher: {
+      cronTime: "CRONS_GAME_DATA_FETCHER_CRONTIME",
+    },
+  },
 };

@@ -8,7 +8,7 @@ import {
   model,
   property,
 } from "@loopback/repository";
-import { MongoDataSource } from "../datasources";
+import { MongoDataSource } from "../datasources/mongo.datasource";
 import { AlCharacter } from "@teloal/parse-character";
 
 type Timestamps = {

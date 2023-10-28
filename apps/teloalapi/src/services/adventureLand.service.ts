@@ -1,6 +1,6 @@
 import { inject, Provider } from "@loopback/core";
 import { getService } from "@loopback/service-proxy";
-import { AdventureLandDataSource } from "../datasources";
+import { AdventureLandDataSource } from "../datasources/adventureLand.datasource";
 
 export interface AdventureLandService {
   getCharacterPage(name: string): Promise<string>;

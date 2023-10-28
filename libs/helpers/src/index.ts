@@ -1,4 +1,5 @@
 export * from "./lib/autoPadding";
+export * from "./lib/byteSize";
 export * from "./lib/Cache";
 export * from "./lib/debounce";
 export * from "./lib/ensureDirectoryExists";
@@ -9,6 +10,8 @@ export * from "./lib/hashString";
 export * from "./lib/md5";
 export * from "./lib/sleep";
 export * from "./lib/smartMinify";
+export * from "./lib/stableStringify";
 export * from "./lib/streamToPromise";
 export * from "./lib/StrictEventEmitter";
+export * from "./lib/stringToStream";
 export * from "./lib/styleFromString";
