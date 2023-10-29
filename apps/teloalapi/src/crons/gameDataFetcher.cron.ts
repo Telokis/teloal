@@ -62,13 +62,13 @@ export class GameDataFetcherCron extends CronJob {
         debug("Checking if the hash is already in DB");
         const exists = await alGameDataRepo.exists(hash);
 
+        debug("Binding the game data in any case");
+        app.bind(AlBindings.GAME_DATA).to(parsed);
+
         if (exists) {
           debug("The data already exists. Stopping there. Tick took %s", ms(Date.now() - start));
           return;
         }
-
-        debug("The data doesn't exist. Binding it to the app context.");
-        app.bind(AlBindings.GAME_DATA).to(parsed);
 
         debug("Storing it in DB.");
         await alGameDataRepo.create({

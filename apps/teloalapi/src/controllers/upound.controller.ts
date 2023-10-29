@@ -8,7 +8,9 @@ import {
   getDefaultPrice,
   getUpoundPath,
 } from "@teloal/upound";
-import type { ItemKey } from "typed-adventureland";
+import type { GData, ItemKey } from "typed-adventureland";
+import { AlBindings } from "../keys/alGameData.keys";
+import { Getter, inject } from "@loopback/core";
 
 function makeOverrideSpec(name: string): Partial<ParameterObject> {
   return {
@@ -22,6 +24,9 @@ function makeOverrideSpec(name: string): Partial<ParameterObject> {
 
 @api({ basePath: "/v1/upound" })
 export class UpoundController {
+  @inject.getter(AlBindings.GAME_DATA)
+  private readonly getGData: Getter<GData>;
+
   @get("/")
   @response(200, {
     description:
@@ -45,11 +50,11 @@ export class UpoundController {
     itemBasePrice: number,
     @param.query.string("mode", {
       description:
-        "How to compute the price. AVG uses the average chance, MIN uses the min chance and MAX uses the max chance.",
+        "How to compute the price. AVG uses the average chance, MIN uses the min chance and MAX uses the max chance. REAL_AVG is special and will try all possible combinations of scrolls and offerings based on the game's chance computation.",
       schema: {
         default: "AVG",
         type: "string",
-        enum: ["AVG", "MIN", "MAX"],
+        enum: ["AVG", "MIN", "MAX", "REAL_AVG"],
       },
     })
     mode?: UpoundModeType,
@@ -83,7 +88,10 @@ export class UpoundController {
     if (cscroll2) overrides.cscroll2 = cscroll2;
     if (cscroll3) overrides.cscroll3 = cscroll3;
 
+    const G = await this.getGData();
+
     const result = await getUpoundPath({
+      G,
       itemName,
       basePrice: itemBasePrice,
       mode: mode?.toUpperCase() as UpoundModeType | undefined,

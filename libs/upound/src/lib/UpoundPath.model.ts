@@ -19,15 +19,7 @@ function makeOverrideSpec(name: string): JsonSchema {
 
 const pathSpec: JsonSchema = {
   type: "object",
-  required: [
-    "value",
-    "scroll",
-    "offering",
-    "chance",
-    "cumulatedChance",
-    "consideredPermutations",
-    "_human",
-  ],
+  required: ["value", "scroll", "offering", "chance", "cumulatedChance", "_human"],
   properties: {
     value: {
       type: "number",
@@ -69,13 +61,6 @@ const pathSpec: JsonSchema = {
       examples: [0.48],
       minimum: 0,
       maximum: 1,
-    },
-    consideredPermutations: {
-      type: "number",
-      description:
-        "How many permutations were considered before deciding. A permutation is a combination of scroll and offering. The more permutations were considered, the more reliable the result.",
-      examples: [7],
-      minimum: 1,
     },
     _human: {
       type: "string",
@@ -209,7 +194,6 @@ export class UpoundPathModel extends Model implements UpoundPath {
       offering: OfferingKey | null;
       chance: number;
       cumulatedChance: number;
-      consideredPermutations: number;
       _human: string;
     }
   >;

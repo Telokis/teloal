@@ -28,7 +28,7 @@ export interface OfferingOverrides {
 
 export type UpoundBothScrolls = UpgradeScrollKey | CompoundScrollKey;
 export type UpoundBothOverrides = ScrollOverrides & OfferingOverrides;
-export type UpoundModeType = "AVG" | "MIN" | "MAX";
+export type UpoundModeType = "AVG" | "MIN" | "MAX" | "REAL_AVG";
 
 export interface DataEntry {
   name: ItemKey;
@@ -58,7 +58,6 @@ export interface UpoundPath {
       offering: OfferingKey | null;
       chance: number;
       cumulatedChance: number;
-      consideredPermutations: number;
       _human: string;
     }
   >;
