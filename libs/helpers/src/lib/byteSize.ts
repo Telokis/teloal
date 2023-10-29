@@ -90,7 +90,7 @@ class ByteSize {
 
     const prefix = bytes < 0 ? "-" : "";
     bytes = Math.abs(bytes);
-    const table = referenceTables[options.units];
+    const table = referenceTables[options.units!];
 
     if (table) {
       const units = table.find((u) => bytes >= u.from && bytes < u.to);
