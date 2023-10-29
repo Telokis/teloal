@@ -1,12 +1,13 @@
-import { inject } from "@loopback/core";
+import { Application, CoreBindings, inject } from "@loopback/core";
 import { CronJob, cronJob } from "@loopback/cron";
 import { repository } from "@loopback/repository";
 import config from "config";
 import Debug from "debug";
 import { AlGameDataRepository } from "../repositories/alGameData.repository";
 import { AdventureLandService } from "../services/adventureLand.service";
-import { byteSize, md5, stableStringify, stringToStream } from "@teloal/helpers";
+import { byteSize, md5, stableStringify } from "@teloal/helpers";
 import ms from "ms";
+import { AlBindings } from "../keys/alGameData.keys";
 
 const debug = Debug("teloal:cron:gamedatafetcher");
 
@@ -14,10 +15,12 @@ const debug = Debug("teloal:cron:gamedatafetcher");
 export class GameDataFetcherCron extends CronJob {
   constructor(
     @inject("services.AdventureLand")
-    protected alService: AdventureLandService,
+    alService: AdventureLandService,
 
     @repository(AlGameDataRepository)
-    protected alGameDataRepo: AlGameDataRepository,
+    alGameDataRepo: AlGameDataRepository,
+
+    @inject(CoreBindings.APPLICATION_INSTANCE) app: Application,
   ) {
     const myConfig = config.crons.gameDataFetcher;
 
@@ -64,7 +67,10 @@ export class GameDataFetcherCron extends CronJob {
           return;
         }
 
-        debug("The data doesn't exist. Storing it in DB.");
+        debug("The data doesn't exist. Binding it to the app context.");
+        app.bind(AlBindings.GAME_DATA).to(parsed);
+
+        debug("Storing it in DB.");
         await alGameDataRepo.create({
           createdAt: new Date(),
           hash: hash,
