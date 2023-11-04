@@ -9,9 +9,9 @@ import { getItemGrade } from "./itemGrade";
 import { baseCompoundChance, baseUpgradeChance } from "./baseChance";
 import Debug = require("debug");
 
-const debug = Debug("teloal:upound:realAvgChance");
+const debug = Debug("teloal:upound:theoreticalMaxChance");
 
-export function realAvgUpgradeChance(
+export function theoreticalMaxUpgradeChance(
   G: GData,
   itemName: ItemKey,
   currentLevel: number,
@@ -79,7 +79,7 @@ export function realAvgUpgradeChance(
   return maxProbability;
 }
 
-export function realAvgCompoundChance(
+export function theoreticalMaxCompoundChance(
   G: GData,
   itemName: ItemKey,
   currentLevel: number,
@@ -150,7 +150,7 @@ export function realAvgCompoundChance(
   return maxProbability;
 }
 
-export function realAvgChance(
+export function theoreticalMaxChance(
   G: GData,
   itemName: ItemKey,
   currentLevel: number,
@@ -160,7 +160,7 @@ export function realAvgChance(
   const gItem = G.items[itemName];
 
   if (gItem.upgrade) {
-    return realAvgUpgradeChance(
+    return theoreticalMaxUpgradeChance(
       G,
       itemName,
       currentLevel,
@@ -169,7 +169,7 @@ export function realAvgChance(
     );
   }
   if (gItem.compound) {
-    return realAvgCompoundChance(
+    return theoreticalMaxCompoundChance(
       G,
       itemName,
       currentLevel,

@@ -50,11 +50,11 @@ export class UpoundController {
     itemBasePrice: number,
     @param.query.string("mode", {
       description:
-        "How to compute the price. AVG uses the average chance, MIN uses the min chance and MAX uses the max chance. REAL_AVG is special and will try all possible combinations of scrolls and offerings based on the game's chance computation.",
+        "How to compute the price. AVG uses the average chance, MIN uses the min chance and MAX uses the max chance. THEORETICAL_MAX is special and will try all possible combinations of scrolls and offerings based on the game's chance computation. It assumes the chance has max grace. You can't get better odds than this.",
       schema: {
         default: "AVG",
         type: "string",
-        enum: ["AVG", "MIN", "MAX", "REAL_AVG"],
+        enum: ["AVG", "MIN", "MAX", "THEORETICAL_MAX"],
       },
     })
     mode?: UpoundModeType,

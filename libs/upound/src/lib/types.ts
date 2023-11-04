@@ -28,7 +28,7 @@ export interface OfferingOverrides {
 
 export type UpoundBothScrolls = UpgradeScrollKey | CompoundScrollKey;
 export type UpoundBothOverrides = ScrollOverrides & OfferingOverrides;
-export type UpoundModeType = "AVG" | "MIN" | "MAX" | "REAL_AVG";
+export type UpoundModeType = "AVG" | "MIN" | "MAX" | "THEORETICAL_MAX";
 
 export interface DataEntry {
   name: ItemKey;

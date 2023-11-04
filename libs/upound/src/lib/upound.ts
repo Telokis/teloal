@@ -12,7 +12,7 @@ import {
   UpoundPath,
 } from "./types";
 import { getPossibleScrolls } from "./itemGrade";
-import { realAvgChance } from "./realAvgChance";
+import { theoreticalMaxChance } from "./theoreticalMaxChance";
 import Debug = require("debug");
 
 const debug = Debug("teloal:upound:upound");
@@ -34,7 +34,7 @@ const SCROLL_COSTS = {
   cscroll3: 2_000_000_000,
 };
 
-const MODES = ["AVG", "MIN", "MAX", "REAL_AVG"];
+const MODES = ["AVG", "MIN", "MAX", "THEORETICAL_MAX"];
 
 // prettier-ignore
 const OFFERINGS = {
@@ -158,9 +158,9 @@ export async function getAbsoluteCheapestUpgrade(
 
   for (const offering of [null, "offeringp", "offering", "offeringx"] as const) {
     for (const scroll of getPossibleScrolls(G.items[itemName], itemLevel)) {
-      const chance = realAvgChance(G, itemName, itemLevel, scroll, offering);
+      const chance = theoreticalMaxChance(G, itemName, itemLevel, scroll, offering);
 
-      debug("Real avg chance: %d (%s %s) lvl %d", chance, scroll, offering, itemLevel);
+      debug("Theoretical max chance: %d (%s %s) lvl %d", chance, scroll, offering, itemLevel);
       const newValue = computeNewCost(currentValue, chance, scroll, offering, overrides);
 
       if (newValue > 0 && (result === null || result.value > newValue)) {
@@ -271,7 +271,7 @@ export async function getUpoundPath({
   for (let lvl = 0; lvl < 13; lvl++) {
     let cheapest: CheapestUpgradeResult | null = null;
 
-    if (mode === "REAL_AVG") {
+    if (mode === "THEORETICAL_MAX") {
       cheapest = await getAbsoluteCheapestUpgrade(
         G,
         itemName,
