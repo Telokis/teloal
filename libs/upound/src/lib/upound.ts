@@ -1,4 +1,4 @@
-import type { ItemKey, OfferingKey } from "typed-adventureland";
+import type { GData, ItemKey, OfferingKey } from "typed-adventureland";
 import { formatNumber, sleep } from "@teloal/helpers";
 
 import rawData = require("../data.json");
@@ -11,6 +11,11 @@ import {
   UpoundModeType,
   UpoundPath,
 } from "./types";
+import { getPossibleScrolls } from "./itemGrade";
+import { theoreticalMaxChance } from "./theoreticalMaxChance";
+import Debug = require("debug");
+
+const debug = Debug("teloal:upound:upound");
 
 const data = rawData as Record<string, DataEntry>;
 
@@ -29,7 +34,7 @@ const SCROLL_COSTS = {
   cscroll3: 2_000_000_000,
 };
 
-const MODES = ["AVG", "MIN", "MAX"];
+const MODES = ["AVG", "MIN", "MAX", "THEORETICAL_MAX"];
 
 // prettier-ignore
 const OFFERINGS = {
@@ -97,6 +102,85 @@ export function thresholdValue(
 }
 
 /**
+ * Determines the cost of upgrading with the specified parameters.
+ *
+ * @param currentValue The current value of the item, before upgrading.
+ * @param chance The chance for the upgrade/compound to succeed.
+ * @param scroll The scroll used for upgrade/compound.
+ * @param offering The offering used for upgrade/compound. Can be null.
+ * @returns The cost of the item after upgrading. If <= 0, an error occurred.
+ */
+export function computeNewCost(
+  currentValue: number,
+  chance: number,
+  scroll: UpoundBothScrolls,
+  offering: null | OfferingKey = null,
+  overrides: UpoundBothOverrides = {},
+) {
+  let value = currentValue;
+  const scrollPrice = getScrollPrice(scroll, overrides);
+  const offeringPrice = getOfferingPrice(offering, overrides);
+
+  if (scrollPrice === 0 || chance <= 0) {
+    return -1;
+  }
+
+  if (scroll.startsWith("c")) {
+    value *= 3;
+  }
+
+  const upgradeCost = scrollPrice + offeringPrice;
+
+  return Math.ceil((value + upgradeCost) * (1 / chance));
+}
+
+interface CheapestUpgradeResult {
+  value: number;
+  scroll: UpoundBothScrolls;
+  offering: null | OfferingKey;
+  chance: number;
+  cumulatedChance: number;
+}
+
+/**
+ * Like getCheapestUpgrade but considers any possible scroll/offering combination
+ * Based on the max computed chances.
+ */
+export async function getAbsoluteCheapestUpgrade(
+  G: GData,
+  itemName: ItemKey,
+  itemLevel: number,
+  currentValue: number,
+  cumulatedChance: number,
+  overrides: UpoundBothOverrides = {},
+): Promise<CheapestUpgradeResult | null> {
+  let result = null;
+
+  for (const offering of [null, "offeringp", "offering", "offeringx"] as const) {
+    for (const scroll of getPossibleScrolls(G.items[itemName], itemLevel)) {
+      const chance = theoreticalMaxChance(G, itemName, itemLevel, scroll, offering);
+
+      debug("Theoretical max chance: %d (%s %s) lvl %d", chance, scroll, offering, itemLevel);
+      const newValue = computeNewCost(currentValue, chance, scroll, offering, overrides);
+
+      if (newValue > 0 && (result === null || result.value > newValue)) {
+        result = {
+          value: newValue,
+          scroll,
+          offering,
+          chance,
+          cumulatedChance: cumulatedChance * chance,
+        };
+      }
+
+      await sleep(1);
+    }
+  }
+
+  return result;
+}
+
+/**
  * @param levelData All data to consider the prices and chances for.
  * @param currentValue The value of the item at the current level
  * @param cumulatedChance The cumulated chance of the item at the current level
@@ -107,7 +191,7 @@ export async function getCheapestUpgrade(
   cumulatedChance: number,
   mode: UpoundModeType,
   overrides: UpoundBothOverrides = {},
-) {
+): Promise<CheapestUpgradeResult | null> {
   let result = null;
   let possibleValue: number;
 
@@ -122,22 +206,9 @@ export async function getCheapestUpgrade(
       chance = maxChance;
     }
 
-    const scrollPrice = getScrollPrice(scroll, overrides);
-    const offeringPrice = getOfferingPrice(offering, overrides);
+    possibleValue = computeNewCost(currentValue, chance, scroll, offering, overrides);
 
-    if (scrollPrice === 0) {
-      continue;
-    }
-
-    if (scroll.startsWith("c")) {
-      possibleValue *= 3;
-    }
-
-    const upgradeCost = scrollPrice + offeringPrice;
-
-    possibleValue = Math.ceil((possibleValue + upgradeCost) * (1 / chance));
-
-    if (result === null || result.value > possibleValue) {
+    if (possibleValue > 0 && (result === null || result.value > possibleValue)) {
       result = {
         value: possibleValue,
         scroll,
@@ -154,6 +225,7 @@ export async function getCheapestUpgrade(
 }
 
 export interface GetUpoundPathOptions {
+  G: GData;
   itemName: ItemKey;
   basePrice: number;
   mode?: UpoundModeType;
@@ -161,6 +233,7 @@ export interface GetUpoundPathOptions {
 }
 
 export async function getUpoundPath({
+  G,
   itemName,
   basePrice,
   mode = "AVG",
@@ -188,7 +261,6 @@ export async function getUpoundPath({
         offering: null,
         chance: 1,
         cumulatedChance: 1,
-        consideredPermutations: 1,
         _human: `${itemName} +0 is set to be worth ${formatNumber(basePrice)} gold.`,
       },
     },
@@ -197,14 +269,27 @@ export async function getUpoundPath({
   const itemData = Object.values(data).filter((item) => item.name === itemName);
 
   for (let lvl = 0; lvl < 13; lvl++) {
-    const levelData = itemData.filter((d) => d.level === lvl);
-    const cheapest = await getCheapestUpgrade(
-      levelData,
-      result.path[lvl].value,
-      result.path[lvl].cumulatedChance,
-      mode,
-      overrides,
-    );
+    let cheapest: CheapestUpgradeResult | null = null;
+
+    if (mode === "THEORETICAL_MAX") {
+      cheapest = await getAbsoluteCheapestUpgrade(
+        G,
+        itemName,
+        lvl,
+        result.path[lvl].value,
+        result.path[lvl].cumulatedChance,
+        overrides,
+      );
+    } else {
+      const levelData = itemData.filter((d) => d.level === lvl);
+      cheapest = await getCheapestUpgrade(
+        levelData,
+        result.path[lvl].value,
+        result.path[lvl].cumulatedChance,
+        mode,
+        overrides,
+      );
+    }
 
     // No data for this level, we stop there.
     if (!cheapest) {
@@ -217,7 +302,6 @@ export async function getUpoundPath({
 
     result.path[lvl + 1] = {
       ...cheapest,
-      consideredPermutations: levelData.length,
       _human: `${itemName} +${
         lvl + 1
       } is worth at least ${valueStr} gold. Chance: ${chanceStr}% (cumulated: ${cumulatedChanceStr}%).`,
