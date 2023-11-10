@@ -20,7 +20,7 @@ export interface ByteSizeResult {
 }
 
 let defaultOptions: ByteSizeOptions = {};
-const _options = new WeakMap();
+const optionWeakMap = new WeakMap();
 
 const referenceTables = {
   metric: [
@@ -84,7 +84,7 @@ class ByteSize {
       defaultOptions,
       options,
     );
-    _options.set(this, options);
+    optionWeakMap.set(this, options);
 
     Object.assign(referenceTables, options.customUnits);
 
@@ -119,7 +119,7 @@ class ByteSize {
   }
 
   toString() {
-    const options = _options.get(this);
+    const options = optionWeakMap.get(this);
     return options.toStringFn ? options.toStringFn.bind(this)() : `${this.value} ${this.unit}`;
   }
 }

@@ -2,7 +2,6 @@ import { inject, injectable, Next, Provider } from "@loopback/core";
 import { Getter } from "@loopback/repository";
 import {
   Request,
-  Response,
   Middleware,
   MiddlewareContext,
   asMiddleware,

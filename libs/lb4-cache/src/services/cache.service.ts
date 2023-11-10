@@ -12,7 +12,7 @@ export class CachingService {
    * @param data - data to cache
    * @param ttl - time to live in seconds
    */
-  async set(key: string, data: any, ttl: number) {
+  async set(key: string, data: unknown, ttl: number) {
     const now = Date.now();
 
     this.store.set(key, { data, storedAt: now, expiresAt: now + ttl * 1000 });

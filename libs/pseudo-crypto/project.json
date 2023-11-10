@@ -1,7 +1,7 @@
 {
-  "name": "upound",
+  "name": "pseudo-crypto",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/upound/src",
+  "sourceRoot": "libs/pseudo-crypto/src",
   "projectType": "library",
   "targets": {
     "build": {
@@ -10,12 +10,12 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/libs/upound",
-        "main": "libs/upound/src/index.ts",
-        "tsConfig": "libs/upound/tsconfig.lib.json",
+        "outputPath": "dist/libs/pseudo-crypto",
+        "tsConfig": "libs/pseudo-crypto/tsconfig.lib.json",
+        "packageJson": "libs/pseudo-crypto/package.json",
+        "main": "libs/pseudo-crypto/src/index.ts",
         "assets": [
-          "libs/upound/*.md",
-          "libs/upound/src/data.json"
+          "libs/pseudo-crypto/*.md"
         ]
       }
     },
@@ -26,7 +26,7 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "libs/upound/**/*.ts"
+          "libs/pseudo-crypto/**/*.ts"
         ]
       }
     },
@@ -36,7 +36,8 @@
         "{workspaceRoot}/coverage/{projectRoot}"
       ],
       "options": {
-        "jestConfig": "libs/upound/jest.config.ts",
+        "jestConfig": "libs/pseudo-crypto/jest.config.ts",
+        "codeCoverage": false,
         "passWithNoTests": true
       },
       "configurations": {

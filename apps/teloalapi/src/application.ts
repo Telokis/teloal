@@ -3,7 +3,7 @@ import { ApplicationConfig } from "@loopback/core";
 import { HealthBindings, HealthComponent } from "@loopback/health";
 import { MetricsBindings, MetricsComponent } from "@loopback/metrics";
 import { RepositoryMixin } from "@loopback/repository";
-import { RestApplication, RestBindings } from "@loopback/rest";
+import { RestApplication } from "@loopback/rest";
 import { RestExplorerBindings, RestExplorerComponent } from "@loopback/rest-explorer";
 import { ServiceMixin } from "@loopback/service-proxy";
 import path from "path";

@@ -74,6 +74,7 @@ export class UpoundController {
   ): Promise<UpoundPath> {
     const overrides: ScrollOverrides & OfferingOverrides = {};
 
+    /* eslint-disable curly */
     // Set all overrides values if specified
     if (offeringp) overrides.offeringp = offeringp;
     if (offering) overrides.offering = offering;
@@ -87,6 +88,7 @@ export class UpoundController {
     if (cscroll1) overrides.cscroll1 = cscroll1;
     if (cscroll2) overrides.cscroll2 = cscroll2;
     if (cscroll3) overrides.cscroll3 = cscroll3;
+    /* eslint-enable curly */
 
     const G = await this.getGData();
 
