@@ -5,7 +5,8 @@ import config from "config";
 import Debug from "debug";
 import { AlGameDataRepository } from "../repositories/alGameData.repository";
 import { AdventureLandService } from "../services/adventureLand.service";
-import { byteSize, md5, stableStringify } from "@teloal/helpers";
+import { byteSize, stableStringify } from "@teloal/helpers";
+import { md5 } from "@teloal/pseudo-crypto";
 import ms from "ms";
 import { AlBindings } from "../keys/alGameData.keys";
 

@@ -20,6 +20,7 @@
       "@teloal/helpers": ["libs/helpers/src/index.ts"],
       "@teloal/lb4-cache": ["libs/lb4-cache/src/index.ts"],
       "@teloal/parse-character": ["libs/parse-character/src/index.ts"],
+      "@teloal/pseudo-crypto": ["libs/pseudo-crypto/src/index.ts"],
       "@teloal/upound": ["libs/upound/src/index.ts"]
     }
   },
