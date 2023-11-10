@@ -1,0 +1,11 @@
+name: Lint repository
+
+on: workflow_call
+
+jobs:
+  run-eslint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Lint all NX packages
+        run: nx run-many -t lint

@@ -1,0 +1,16 @@
+name: Orchestrates sub-workflows
+
+on: push
+
+jobs:
+  lint-all:
+    uses: ./.github/workflows/lint.yml
+
+  test-all:
+    uses: ./.github/workflows/test.yml
+
+  build-api:
+    needs:
+      - lint-all
+      - test-all
+    uses: ./.github/workflows/build.yml

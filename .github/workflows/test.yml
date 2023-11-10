@@ -1,0 +1,11 @@
+name: Test repository
+
+on: workflow_call
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test all NX packages
+        run: nx run-many -t test
