@@ -1,10 +1,4 @@
-import type {
-  ItemKey,
-  MapKey,
-  ItemInfoPValues,
-  TradeSlotType,
-  StatType,
-} from "typed-adventureland";
+import type { ItemKey, MapKey, ItemInfoPValues, StatType } from "typed-adventureland";
 
 export type AlMerchantTradeSlot = {
   name: ItemKey;

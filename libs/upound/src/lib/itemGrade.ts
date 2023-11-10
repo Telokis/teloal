@@ -1,4 +1,4 @@
-import { CompoundScrollKey, GItem, OfferingKey, UpgradeScrollKey } from "typed-adventureland";
+import { CompoundScrollKey, GItem, UpgradeScrollKey } from "typed-adventureland";
 
 export function getItemGrade(gItem: GItem, level: number = 0) {
   if (!(gItem.upgrade || gItem.compound)) {

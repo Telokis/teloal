@@ -17,5 +17,5 @@ export interface CacheMetadata {
 export interface CacheEntry {
   storedAt: number;
   expiresAt: number;
-  data: any;
+  data: unknown;
 }

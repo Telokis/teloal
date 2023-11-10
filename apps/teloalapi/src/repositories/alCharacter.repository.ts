@@ -16,6 +16,7 @@ type Timestamps = {
   updatedAt?: Date;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type GConstructor<T = {}> = new (...args: any[]) => T;
 
 function extendClassWithTimestamps<T extends GConstructor<Entity>>(Base: T) {
@@ -23,6 +24,7 @@ function extendClassWithTimestamps<T extends GConstructor<Entity>>(Base: T) {
     name: "AlCharacter",
   })
   class Extended extends Base {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     constructor(...args: any[]) {
       super(...args);
     }
@@ -83,9 +85,9 @@ export class AlCharacterRepository extends DefaultCrudRepository<
 
   async upsert(char: AlCharacter) {
     if (await this.exists(char.name)) {
-      return await this.updateById(char.name, char);
+      return this.updateById(char.name, char);
     }
 
-    return await this.create(char);
+    return this.create(char);
   }
 }

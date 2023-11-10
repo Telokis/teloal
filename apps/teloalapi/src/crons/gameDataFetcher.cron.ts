@@ -37,6 +37,7 @@ export class GameDataFetcherCron extends CronJob {
       cronTime: myConfig.cronTime,
       start: myConfig.enable,
 
+      // eslint-disable-next-line @typescript-eslint/no-misused-promises
       onTick: async () => {
         const start = Date.now();
 

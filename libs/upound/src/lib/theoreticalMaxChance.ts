@@ -57,9 +57,9 @@ export function theoreticalMaxUpgradeChance(
     } else if (gOffering.grade > grade) {
       probability = probability * 1.5;
       high = true;
-    } else if (gOffering.grade == grade) {
+    } else if (gOffering.grade === grade) {
       probability = probability * 1.4;
-    } else if (gOffering.grade == grade - 1) {
+    } else if (gOffering.grade === grade - 1) {
       probability = probability * 1.15;
     } else {
       probability = probability * 1.08;
@@ -129,9 +129,9 @@ export function theoreticalMaxCompoundChance(
     } else if (gOffering.grade > grade) {
       probability = probability * 1.48;
       high = 1;
-    } else if (gOffering.grade == grade) {
+    } else if (gOffering.grade === grade) {
       probability = probability * 1.36;
-    } else if (gOffering.grade == grade - 1) {
+    } else if (gOffering.grade === grade - 1) {
       probability = probability * 1.15;
     } else {
       probability = probability * 1.08;
