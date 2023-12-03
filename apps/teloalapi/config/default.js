@@ -1,5 +1,4 @@
 require("dotenv").config();
-const path = require("path");
 
 function parseIntDefault(str, radix, defaultValue) {
   const res = parseInt(str, radix);

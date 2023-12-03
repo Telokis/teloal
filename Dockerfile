@@ -1,3 +1,13 @@
+#############################
+#  ____                     #
+# |  _ \                    #
+# | |_) |  __ _  ___   ___  #
+# |  _ <  / _` |/ __| / _ \ #
+# | |_) || (_| |\__ \|  __/ #
+# |____/  \__,_||___/ \___| #
+#                           #
+#                           #
+#############################
 FROM node:18-slim as build
 
 RUN mkdir -p /build
@@ -14,6 +24,16 @@ COPY . .
 
 RUN npx nx run-many -t build
 
+#####################################################
+#  _______     _                _                _  #
+# |__   __|   | |              | |              (_) #
+#    | |  ___ | |  ___    __ _ | |  __ _  _ __   _  #
+#    | | / _ \| | / _ \  / _` || | / _` || '_ \ | | #
+#    | ||  __/| || (_) || (_| || || (_| || |_) || | #
+#    |_| \___||_| \___/  \__,_||_| \__,_|| .__/ |_| #
+#                                        | |        #
+#                                        |_|        #
+#####################################################
 FROM node:18-alpine as teloalapi
 
 # Set to a non-root built-in user `node`
@@ -43,3 +63,36 @@ ENV HOST=0.0.0.0 PORT=3000
 
 EXPOSE ${PORT}
 CMD [ "node", "src/main.js" ]
+
+#########################################################################
+#  _______     _                _           __                     _    #
+# |__   __|   | |              | |         / _|                   | |   #
+#    | |  ___ | |  ___    __ _ | | ______ | |_  _ __  ___   _ __  | |_  #
+#    | | / _ \| | / _ \  / _` || ||______||  _|| '__|/ _ \ | '_ \ | __| #
+#    | ||  __/| || (_) || (_| || |        | |  | |  | (_) || | | || |_  #
+#    |_| \___||_| \___/  \__,_||_|        |_|  |_|   \___/ |_| |_| \__| #
+#                                                                       #
+#                                                                       #
+#########################################################################
+FROM node:18-alpine as teloal-frontend
+
+# Set to a non-root built-in user `node`
+USER node
+
+ENV NODE_ENV=production
+
+# Create app directory (with user `node`)
+RUN mkdir -p /home/node/app/
+
+WORKDIR /home/node/app
+
+COPY --from=build --chown=node /build/dist/apps/teloal-frontend/ .
+
+RUN npm ci --production
+
+COPY --from=build --chown=node /build/dist/libs/helpers/ /home/node/app/node_modules/@teloal/helpers/
+
+ENV HOST=0.0.0.0 PORT=3001
+
+EXPOSE ${PORT}
+CMD [ "npm", "start" ]
