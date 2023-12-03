@@ -13,8 +13,9 @@ jobs:
       - uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4
         with:
           node-version: 18
+          cache: "npm"
 
-      - run: npm ci
+      - run: npm ci --prefer-offline
 
       - name: Lint all NX packages
         run: npx nx run-many -t lint
