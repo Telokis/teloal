@@ -16,6 +16,10 @@ declare module "config" {
     token: string | undefined;
   };
 
+  export const auth: {
+    bcryptRounds: number;
+  };
+
   export const mongo: {
     host: string;
     port: number;
