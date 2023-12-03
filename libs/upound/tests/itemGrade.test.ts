@@ -6,7 +6,7 @@ let G: GData;
 
 beforeAll(async () => {
   G = await getGData();
-});
+}, 20000);
 
 describe("itemGrade", () => {
   it("should return 0 for a lvl 0 ololipop", () => {

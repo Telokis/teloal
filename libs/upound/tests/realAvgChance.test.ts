@@ -6,7 +6,7 @@ let G: GData;
 
 beforeAll(async () => {
   G = await getGData();
-});
+}, 20000);
 
 describe("realAvgUpgradeChance", () => {
   it("should return 0.48 for a harbringer lvl 6 with rare scroll and offering", () => {
