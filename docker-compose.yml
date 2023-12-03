@@ -4,7 +4,7 @@
 version: "3"
 services:
   teloal-mongo:
-    image: mongo
+    image: mongo:7
     container_name: teloal-mongo
     restart: unless-stopped
     environment:
@@ -17,7 +17,7 @@ services:
       - ./scripts/init-mongo.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
 
   teloal-mongo-express:
-    image: mongo-express
+    image: mongo-express:1.0.0-18-alpine3.18
     container_name: teloal-mongo-express
     restart: unless-stopped
     environment:
