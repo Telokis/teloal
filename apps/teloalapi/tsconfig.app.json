@@ -16,7 +16,7 @@
     "moduleResolution": "node",
     "target": "es2018",
     "sourceMap": true,
-    "declaration": true,
+    "declaration": false,
     "importHelpers": true,
     "types": ["node"]
   },
