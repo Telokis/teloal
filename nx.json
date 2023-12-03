@@ -65,6 +65,15 @@
         "tsConfiguration": true,
         "configureTestRunner": false
       }
+    },
+    "@nx/next": {
+      "application": {
+        "directory": "apps",
+        "e2eTestRunner": "none",
+        "unitTestRunner": "jest",
+        "style": "@emotion/styled",
+        "linter": "eslint"
+      }
     }
   },
   "namedInputs": {
