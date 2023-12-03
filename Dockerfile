@@ -88,7 +88,7 @@ WORKDIR /home/node/app
 
 COPY --from=build --chown=node /build/dist/apps/teloal-frontend/ .
 
-RUN npm ci --production
+RUN npm i --no-package-lock
 
 COPY --from=build --chown=node /build/dist/libs/helpers/ /home/node/app/node_modules/@teloal/helpers/
 

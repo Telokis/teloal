@@ -6,7 +6,7 @@ env:
   REGISTRY: ghcr.io
 
 jobs:
-  build-teloalapi:
+  build:
     runs-on: ubuntu-latest
 
     # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
