@@ -16,6 +16,15 @@ declare module "config" {
     token: string | undefined;
   };
 
+  export const auth: {
+    bcryptRounds: number;
+
+    recaptcha: {
+      siteKey: string | null;
+      secretKey: string | null;
+    };
+  };
+
   export const mongo: {
     host: string;
     port: number;
