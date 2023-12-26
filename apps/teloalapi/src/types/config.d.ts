@@ -18,6 +18,11 @@ declare module "config" {
 
   export const auth: {
     bcryptRounds: number;
+
+    recaptcha: {
+      siteKey: string | null;
+      secretKey: string | null;
+    };
   };
 
   export const mongo: {
