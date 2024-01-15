@@ -1,13 +1,17 @@
-import { HttpErrors, RequestBodyObject, api, post, requestBody } from "@loopback/rest";
+import { HttpErrors, RequestBodyObject, api, post, requestBody, response } from "@loopback/rest";
 import { parseCharacters, AlCharacter } from "@teloal/parse-character";
 import { repository } from "@loopback/repository";
 import { UsersRepository } from "../repositories/Users.repository";
 
-type UserSignupBody = {
+export type UserSignupBody = {
+  /** The chosen username for the account. Must be unique */
   username: string;
+
+  /** The chosen password for the account. Must be at least 10 chars long. */
   password: string;
 };
 
+// TODO: Use ts-json-schema-generator
 const userSignupBodySchema: Partial<RequestBodyObject> = {
   description: "Required input for signup",
   required: true,
@@ -37,7 +41,24 @@ export class AuthController {
   protected usersRepo: UsersRepository;
 
   @post("/signup")
-  async getCharacter(
+  @response(200, {
+    description: "Successful signup.",
+    content: {
+      "application/json": {
+        schema: {
+          type: "object",
+          required: ["success"],
+          properties: {
+            success: {
+              type: "boolean",
+              description: "The chosen username for the account. Must be unique",
+            },
+          },
+        },
+      },
+    },
+  })
+  async signup(
     @requestBody(userSignupBodySchema) signupPayload: UserSignupBody,
   ): Promise<AlCharacter> {
     const html = await this.alService.getCharacterPage(name);
