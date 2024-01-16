@@ -3,6 +3,13 @@ module.exports = {
   al: {
     token: "AL_TOKEN",
   },
+  auth: {
+    pepper: "AUTH_PEPPER",
+    recaptcha: {
+      siteKey: "AUTH_RECAPTCHA_SITE_KEY",
+      secretKey: "AUTH_RECAPTCHA_SECRET_KEY",
+    },
+  },
   mongo: {
     host: "MONGO_HOST",
     user: "MONGO_USER",

@@ -9,6 +9,7 @@ import { User, UserRole } from "../types/User";
 export class UserModel extends Entity implements User {
   @property({
     id: true,
+    required: true,
     jsonSchema: {
       description: "Uniquely identifies a user.",
     },
@@ -23,6 +24,7 @@ export class UserModel extends Entity implements User {
   email?: string;
 
   @property({
+    required: true,
     jsonSchema: {
       description: "Hashed user password.",
     },
@@ -30,6 +32,7 @@ export class UserModel extends Entity implements User {
   password: string;
 
   @property({
+    required: true,
     jsonSchema: {
       description: "Hashed user password.",
       enum: ["admin", "user"],

@@ -1,12 +1,12 @@
 import { ResponseObject } from "@loopback/rest";
 
-export const NotFoundErrorSchema: ResponseObject = {
-  description: "The request did not yield any result.",
+export const ConflictErrorResponse: ResponseObject = {
+  description: "The request triggered a conflict.",
   content: {
     "application/json": {
       schema: {
         type: "object",
-        title: "NotFoundError",
+        title: "ConflictError",
         properties: {
           error: {
             type: "object",
@@ -15,12 +15,12 @@ export const NotFoundErrorSchema: ResponseObject = {
               statusCode: {
                 type: "number",
                 description: "Constant value for this error.",
-                enum: [404],
+                enum: [409],
               },
               name: {
                 type: "string",
                 description: "Constant value for this error.",
-                enum: ["NotFoundError"],
+                enum: ["ConflictError"],
               },
               message: {
                 type: "string",

@@ -1,0 +1,27 @@
+[
+  {
+    "filePath": "./apps/teloalapi/src/types/User.ts",
+    "typeName": "User"
+  },
+  {
+    "filePath": "./apps/teloalapi/src/controllers/auth.controller.ts",
+    "typeName": "UserSignupBody"
+  },
+  {
+    "filePath": "./apps/teloalapi/src/types/ValidationError.ts",
+    "typeName": "ValidationError"
+  },
+  {
+    "filePath": "./apps/teloalapi/src/types/SuccessResponseObject.ts",
+    "typeName": "SuccessResponseObject"
+  },
+  {
+    "filePath": "./apps/teloalapi/src/types/ConfigInterface.ts",
+    "typeName": "ConfigInterface",
+    "keepDefinition": true,
+    "asConst": true,
+    "additionalOptions": {
+      "topRef": false
+    }
+  }
+]

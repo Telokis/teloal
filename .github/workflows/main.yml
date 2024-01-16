@@ -1,6 +1,22 @@
 name: Orchestrates sub-workflows
 
-on: push
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
+  push:
+    branches:
+      - master
+
+concurrency:
+  # When the workflow is running on master, we want to let it finish everytime.
+  # If it's not on master, we use the ref (mainly branch name) instead.
+  # We fall back to the run_id if the ref is undefined (manual trigger).
+  group: ${{ github.workflow }}-${{ github.ref == 'refs/heads/master' && github.run_id || github.ref || github.run_id }}
+  cancel-in-progress: true
 
 jobs:
   lint-all:
