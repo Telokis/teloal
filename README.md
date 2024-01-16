@@ -89,5 +89,5 @@ Simply run `docker-compose up -d` at the root of the repository to get things st
 Use the following command to rebuild and serve the server. This won't watch the files, you need to do it again when changing something:
 
 ```
-npx nx run teloalapi:build && npx nx run teloalapi:serve
+npx jmake generate-schemas && npx nx run teloalapi:build && npx nx run teloalapi:serve
 ```
