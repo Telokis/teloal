@@ -4,6 +4,7 @@ module.exports = {
     token: "AL_TOKEN",
   },
   auth: {
+    pepper: "AUTH_PEPPER",
     recaptcha: {
       siteKey: "AUTH_RECAPTCHA_SITE_KEY",
       secretKey: "AUTH_RECAPTCHA_SECRET_KEY",

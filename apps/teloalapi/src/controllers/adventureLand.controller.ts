@@ -1,6 +1,6 @@
 import { inject } from "@loopback/core";
 import { HttpErrors, api, get, getModelSchemaRef, param, response } from "@loopback/rest";
-import { NotFoundErrorSchema } from "../schemas/NotFoundError";
+import { NotFoundErrorResponse } from "../schemas/responses/NotFoundResponse";
 import { AdventureLandService } from "../services/adventureLand.service";
 import { cache } from "@teloal/lb4-cache";
 import { parseCharacters, AlCharacter } from "@teloal/parse-character";
@@ -32,7 +32,7 @@ export class AdventureLandController {
     },
   })
   @response(404, {
-    ...NotFoundErrorSchema,
+    ...NotFoundErrorResponse,
     description: "The requested character was not found.",
   })
   async getCharacter(@param.path.string("name") name: string): Promise<AlCharacter> {
@@ -59,7 +59,7 @@ export class AdventureLandController {
     },
   })
   @response(404, {
-    ...NotFoundErrorSchema,
+    ...NotFoundErrorResponse,
     description: "The requested player was not found.",
   })
   async getPlayer(@param.path.string("name") name: string): Promise<Array<AlCharacter>> {

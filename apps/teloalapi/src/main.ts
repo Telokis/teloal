@@ -1,5 +1,7 @@
 import { ApplicationConfig, TeloAlApiApplication } from "./application";
 import config from "config";
+import Ajv from "ajv";
+import { configInterfaceSchema } from "./schemas/ConfigInterface.schema";
 
 export * from "./application";
 
@@ -13,6 +15,15 @@ export async function main(options: ApplicationConfig = {}) {
   console.log(`Try ${url}/ping`);
 
   return app;
+}
+
+const ajv = new Ajv({ allErrors: true });
+
+const isConfigValid = ajv.validate(configInterfaceSchema, config);
+if (!isConfigValid) {
+  console.error(`Configuration is invalid. See below.`);
+  console.error(ajv.errors);
+  throw new Error("Invalid config.");
 }
 
 // Run the application

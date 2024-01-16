@@ -1,36 +1,39 @@
 import { HttpErrors, RequestBodyObject, api, post, requestBody, response } from "@loopback/rest";
-import { parseCharacters, AlCharacter } from "@teloal/parse-character";
 import { repository } from "@loopback/repository";
 import { UsersRepository } from "../repositories/Users.repository";
+import { userSignupBodySchema } from "../schemas/UserSignupBody.schema";
+import { ConflictErrorResponse } from "../schemas/responses/ConflictErrorResponse";
+import { ValidationErrorResponse } from "../schemas/responses/ValidationErrorResponse";
+import { SuccessResponse } from "../schemas/responses/SuccessResponse";
+import { SuccessResponseObject } from "../types/SuccessResponseObject";
+import { hashPassword } from "@teloal/pseudo-crypto";
+import config from "config";
+import { UserRole } from "../types/User";
 
 export type UserSignupBody = {
-  /** The chosen username for the account. Must be unique */
+  /**
+   * The chosen username for the account. Must be unique
+   *
+   * @minLength 3
+   * @maxLength 20
+   * @pattern ^[a-zA-Z](?:[a-zA-Z0-9]+[-_]?)+[a-zA-Z0-9]+$
+   */
   username: string;
 
-  /** The chosen password for the account. Must be at least 10 chars long. */
+  /**
+   * The chosen password for the account. Must be at least 10 chars long.
+   *
+   * @minLength 10
+   */
   password: string;
 };
 
-// TODO: Use ts-json-schema-generator
-const userSignupBodySchema: Partial<RequestBodyObject> = {
+const userSignupBodyDesc: Partial<RequestBodyObject> = {
   description: "Required input for signup",
   required: true,
   content: {
     "application/json": {
-      schema: {
-        type: "object",
-        required: ["username", "password"],
-        properties: {
-          username: {
-            type: "string",
-            description: "The chosen username for the account. Must be unique",
-          },
-          password: {
-            type: "string",
-            description: "The chosen password for the account. Must be at least 10 chars long.",
-          },
-        },
-      },
+      schema: userSignupBodySchema,
     },
   },
 };
@@ -41,34 +44,39 @@ export class AuthController {
   protected usersRepo: UsersRepository;
 
   @post("/signup")
-  @response(200, {
-    description: "Successful signup.",
-    content: {
-      "application/json": {
-        schema: {
-          type: "object",
-          required: ["success"],
-          properties: {
-            success: {
-              type: "boolean",
-              description: "The chosen username for the account. Must be unique",
-            },
-          },
-        },
-      },
-    },
-  })
+  @response(200, SuccessResponse)
+  @response(409, ConflictErrorResponse)
+  @response(422, ValidationErrorResponse)
   async signup(
-    @requestBody(userSignupBodySchema) signupPayload: UserSignupBody,
-  ): Promise<AlCharacter> {
-    const html = await this.alService.getCharacterPage(name);
+    @requestBody(userSignupBodyDesc) signupPayload: UserSignupBody,
+  ): Promise<SuccessResponseObject> {
+    const { username, password } = signupPayload;
 
-    const char = (await parseCharacters(html))[0];
-
-    if (!char) {
-      throw new HttpErrors.NotFound(`The character "${name}" doesn't exist.`);
+    if (password.length < 10) {
+      throw new HttpErrors.BadRequest(`The password must be at least 10 characters long.`);
     }
 
-    return char;
+    if (await this.usersRepo.exists(username)) {
+      throw new HttpErrors.Conflict(`This username is already in use.`);
+    }
+
+    const hashedPassword = await hashPassword(
+      password,
+      config.auth.bcryptRounds,
+      config.auth.pepper,
+    );
+
+    try {
+      await this.usersRepo.create({
+        username,
+        password: hashedPassword,
+        role: UserRole.user,
+      });
+    } catch (err) {
+      console.error(err);
+      throw new HttpErrors.InternalServerError("Something went wrong. Try again later.");
+    }
+
+    return { success: true };
   }
 }

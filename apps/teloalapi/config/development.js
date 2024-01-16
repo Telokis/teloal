@@ -5,4 +5,7 @@ module.exports = {
     user: "teloal",
     password: "teloal",
   },
+  auth: {
+    pepper: "8Xh9jXF8XBiLJqX7_8Q6EEPgDzQ_Mi8H",
+  },
 };
